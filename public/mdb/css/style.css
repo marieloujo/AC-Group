@@ -1,0 +1,189 @@
+
+
+/*---------------- Apply font ------------------*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.font-montserrart {
+
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+
+/*---------------- End Apply font ------------------*/
+
+
+
+
+
+/*---------------- Header section ------------------*/
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #f4a548 !important;
+}
+
+/*
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+ .navbar:not(.top-nav-collapse) {
+  background: #f4a548 !important;
+ }
+}*/
+
+.rgba-gradient {
+  background: linear-gradient(45deg, rgba(242, 165, 26, 0.6) , rgba(234, 98, 39, 0.69) 100%);
+}
+
+
+.navbar {
+
+  background-image: linear-gradient(to right, orange, #ef6c00 );
+
+}
+
+/*---------------- End header ------------------*/
+
+
+
+
+
+
+
+
+
+/*---------------- Timeline section expertises ------------------*/
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background-color: #50a1ff;
+}
+
+
+@media (max-width: 767.98px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .timeline-element {
+    width: 100%;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+}
+
+/*----------------  End Timeline ------------------*/
+
+
+
+/*----------------  Sections nos réalisations ------------------*/
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%; 
+}
+  .gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease; 
+}
+  .gallery .animation {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); 
+}
+
+@media (max-width: 450px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn.filter {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}
+button.close {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  padding-right: 1rem;
+  padding-top: .6rem;
+}
+
+/*----------------  End Section ------------------*/
+
+
+
+
+
+
+
+/*---------------- Autres ------------------*/
+
+.bottom-img{
+  width: 100%;
+  position: fixed;
+}
+
+
+.barre {
+    height: 0.2em;
+    width: 15em;
+    background-color: #ef6c00;
+}
+
+/*---------------- End ------------------*/
+
+
+
+
