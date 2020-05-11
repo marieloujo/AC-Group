@@ -32,11 +32,6 @@
                       </a><br>
 
                       <b><u>Nom et prénom</u> :</b> {{$name}} <br><br>
-                      <b><u>Société</u> :</b> {{$societe}} <br><br>
-                      <b><u>Beoins</u> :
-                        <ul>
-                          <li>Coffee</li>
-                        </ul></b> {{$name}} <br><br>
 
                       {{$contenu}}
                   </div>

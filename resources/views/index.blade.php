@@ -62,70 +62,34 @@
 
 
     <!--Section: Expertises-->
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
 
-        <h3 class="font-weight-bold text-center">Notre expertise</h3>
+        <h3 class="font-weight-bold text-center">Nos services</h3>
         <hr class="w-header my-4">
-        <p class=" text-muted mx-auto mb-5 col-md-11 text-center">
+        <p class="text-muted lead mx-auto mb-5 col-lg-12 text-center">
             Nous sommes une structure organisée en deux pôles: AC Communication intervenant dans le
             webmarketing, les stratégies de communication, de gestion financière et AC Services spécialisé
             dans l’ingénierie électrique.
         </p>
 
-        <div class="row">
-      
-            <div class="col-md-12 mt-3 dark-grey-text d-flex justify-content-center">
-    
-                <!--a class="nav-link active " data-toggle="tab" href="#expertises-communication" role="tab">
-                    <button type="button" class="btn btn-outline-primary waves-effect btn-lg m-0 px-3 py-1 filter"
-                        data-rel="all" >AC Communication
-                    </button>
-                </a-->
-
-                <button type="button" class="btn btn-flat btn-lg m-0 px-3 py-1 nav-link"
-                    data-toggle="tab" href="#expertises-communication" role="tab">
-                    AC Communication
-                </button>
-                <p class="font-weight-bold mb-0 px-1 py-1">/</p>
-
-                <button type="button" class="btn btn-flat btn-lg m-0 px-3 py-1 nav-link"
-                    data-toggle="tab" href="#expertises-services" role="tab">
-                    AC Services
-                </button>
-    
-                <!--a class="nav-link" data-toggle="tab" href="#expertises-services" role="tab">
-                    <button type="button" class="btn btn-outline-primary waves-effect btn-lg m-0 px-3 py-1 filter"
-                        data-rel="1">AC Services
-                    </button>
-                </a-->
-    
-            </div>
-        
-        </div>
-
     </div>
 
 
-    <div class="container-fluid mb-5  my-5 px-4 px-lg-0 tab-content" >
+    <div class="container-fluid mb-5 pt-3  my-5 px-4 px-lg-0" >
 
-        <section class="tab-pane fade in show active p-md-3 mx-md-5" id="expertises-communication">
+        <section class="p-md-3 mx-md-5 mb-4" id="expertises-communication">
 
-
-            <div class="row mb-5 mt-3 d-flex justify-content-between align-items-center">
-                <div class="col-lg-12 text-center">
-        
-                    <h5 class="font-weight-bold text-capitalize">Expérience digitale améliorée</h5>
-            
-                    <p class="text-muted">
-                        Construisons ensemble les solutions de demain. Apportons une visibilité accrue à vos idées, projets 
-                        grâce aux meilleures stratégies de communication créatives, éprouvées sur des projets ambitieux.
-                    </p>
-            
-                </div>
+            <div class="container text-center pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
+                <h5 class="font-weight-bold mb-2">AC Communication</h5>
+    
+                <p class="text-muted text-center pt-2">
+                    Construisons ensemble les solutions de demain. Apportons une visibilité accrue à vos idées, projets 
+                    grâce aux meilleures stratégies de communication créatives, éprouvées sur des projets ambitieux.
+                </p>
             </div>
 
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
+            <div class="row pt-5 pb-5">
+                <div class="col-lg-10 mx-auto">
         
                     <ol class="timeline">
 
@@ -155,8 +119,8 @@
                                 </div>
             
                                 <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid"
+                                    <div class="overlay">
+                                        <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}" class="img-fluid"
                                         alt="Sample project image" />
                                         <a href="#">
                                         </a>
@@ -167,11 +131,11 @@
                         </li>
             
                         <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center justify-content-end">
+                            <div class="row mb-5 d-flex align-items-center contenjustify-t-end">
                             
                                 <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid"
+                                    <div class="overlay">
+                                        <img src="{{asset('images/illustrations/seo.svg')}}" class="img-fluid"
                                         alt="Sample project image" />
                                         <a href="#">
                                             <div class="mask rgba-white-slight"></div>
@@ -227,8 +191,8 @@
                                 </div>
             
                                 <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid"
+                                    <div class="overlay">
+                                        <img src="{{asset('images/illustrations/gestion_financiere.svg')}}" class="img-fluid"
                                         alt="Sample project image" />
                                         <a href="/expertises#first-section">
                                             <div class="mask rgba-white-slight"></div>
@@ -244,28 +208,29 @@
                 </div>
             </div>
 
+            <div class="text-center pb-5">
+                <a href="{{url('/expertises#ac-communication')}}">
+                    <button type="button" class="btn btn-outline-warning waves-effect">Lire plus ...</button>
+                </a>
+            </div>
+
         </section>
 
 
-        <section class="tab-pane fade p-md-3 mx-md-5" id="expertises-services">
+        <section class="p-md-3 mx-md-5 mt-5" id="expertises-services">
 
-
-            <div class="row mb-5 mt-3 d-flex justify-content-between align-items-center">
-                <div class="col-lg-12 text-center">
-        
-                    <h5 class="font-weight-bold text-capitalize">Ingénierie électrique de qualité</h5>
-            
-                    <p class="text-muted">
-                        Modernisons vos installations électriques. Notre expertise se concentre sur
-                        l’électricité simple et complexe. L’installation, le suivi, des réseaux haute et
-                        basse tension en fonction de l’usager et de l’usage prévu.
-                    </p>
-            
-                </div>
+            <div class="container text-center pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
+                <h5 class="font-weight-bold mb-2">AC Services</h5>
+    
+                <p class="text-muted text-center pt-2">
+                    Modernisons vos installations électriques. Notre expertise se concentre sur
+                    l’électricité simple et complexe. L’installation, le suivi, des réseaux haute et
+                    basse tension en fonction de l’usager et de l’usage prévu.
+                </p>
             </div>
 
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
+            <div class="row pt-5 pb-5">
+                <div class="col-lg-10 mx-auto">
         
                     <ol class="timeline">
 
@@ -378,158 +343,17 @@
             
                             </div>
                         </li>
-
-                        <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center justify-content-end">
-                            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="#">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInRight" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                Plan de protection et note de calculs des réseaux Haute Tension et Basse Tension
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">En savoir plus
-                                                <i class="fas fa-plus-circle"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-            
-                        <li class="timeline-element">
-                            <div class="row d-flex mb-5 align-items-center">
-                        
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                Rétrofit des équipements électriques Haute et Basse Tension
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">En savoir plus
-                                                <i class="fas fa-plus-circle"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="/expertises#first-section">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-
-                        <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center justify-content-end">
-                            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="#">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInRight" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                Étude d’exécution des installations électriques
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">En savoir plus
-                                                <i class="fas fa-plus-circle"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-            
-                        <li class="timeline-element">
-                            <div class="row d-flex mb-5 align-items-center">
-                        
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                Étude éclairage extérieur, intérieur et architectural
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">En savoir plus
-                                                <i class="fas fa-plus-circle"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="/expertises#first-section">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
             
                     </ol>
         
                 </div>
+            </div>
+
+
+            <div class="text-center pb-5">
+                <a href="{{url('/expertises#ac-services')}}">
+                    <button type="button" class="btn btn-outline-warning waves-effect">Lire plus ...</button>
+                </a>
             </div>
 
         </section>

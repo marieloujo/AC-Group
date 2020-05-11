@@ -1,9 +1,16 @@
 
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 /*---------------- Apply font ------------------*/
 
 body {
   font-family: 'Montserrat', sans-serif;
+
+  background-color: #fff;
 }
 
 
@@ -63,6 +70,40 @@ header,
   background-image: linear-gradient(to right, orange, #ef6c00 );
 
 }
+
+
+
+@media (min-width: 992px) {
+
+  .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .navbar-nav .nav-link {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 0;
+  }
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .navbar-nav .nav-link {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 0;
+  }
+}
+
 
 /*---------------- End header ------------------*/
 
@@ -183,6 +224,20 @@ button.close {
 }
 
 /*---------------- End ------------------*/
+
+
+
+.active-nav {
+
+  background-color: rgba(242, 165, 26, 0.4);
+
+}
+
+
+.card-header {
+  background-color: #fff;
+}
+
 
 
 

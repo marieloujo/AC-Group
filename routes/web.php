@@ -20,7 +20,7 @@ Route::get('/faq', 'MainController@faq')->name('faq');
 Route::get('/actualites', 'MainController@actualites')->name('actualites');
 Route::get('/contact', 'MainController@contact')->name('contact');
 
-Route::post('/send-mail', 'ContactController@sendMail')->name('sendMail');
+Route::post('/send-mail', 'ContactController@sendSimpleMail')->name('sendSimpleMail');
 
 
 

@@ -4,19 +4,24 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="{{asset('scroll-effect/js/scrolla.jquery.min.js')}}"></script>
+<script src="{{asset('js/scrolla.jquery.min.js')}}"></script>
 
 <script type="text/javascript" src="{{asset('mdb/js/popper.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('mdb/js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('mdb/js/mdb.min.js')}}"></script>
 
 
+    <!-- Forms Validations Plugin -->
+    <script src="{{asset('create-tim/js/plugins/jquery.validate.min.js')}}"></script>
+
+
+@yield('other-js')
+
+
 
 
 <script type="text/javascript">
     $(document).ready(function(){
-
-        var presentation=$('#presentation');
 
         $(function () {
             var selectedClass = "";
@@ -31,41 +36,37 @@
             });
         });
 
-        /*var $item = $('.item-link'),
-            $active = $('.active-nav');
-
-
-        $active.css({
-            backgroundColor: '#005826'
+        $('.animate').scrolla({
+            mobile: true
         });
-        $active.children().addClass('white-text');
-        $active.children().css({
-            textTransform: 'upperCase'
-        });
+        
 
-        item.hover(function () {
-            $(this).children().addClass('white-text');
-            $(this).css({
-                backgroundColor: '#005826'
-            });
-        },function () {
-            $(this).children().removeClass('white-text');
-            $(this).css({
-                backgroundColor: 'transparent'
-            });
-        });*/
     });
 
-    
 </script>
 
 
 <script>
-
-	$('.animate').scrolla({
-		mobile: true
-	});
-
+    function setFormValidation(id) {
+      $(id).validate({
+        highlight: function(element) {
+          $(element).closest('.form-group').removeClass('has-success').addClass('has-danger');
+          $(element).closest('.form-check').removeClass('has-success').addClass('has-danger');
+        },
+        success: function(element) {
+          $(element).closest('.form-group').removeClass('has-danger').addClass('has-success');
+          $(element).closest('.form-check').removeClass('has-danger').addClass('has-success');
+        },
+        errorPlacement: function(error, element) {
+          $(element).closest('.form-group').append(error);
+        },
+      });
+    }
+  
+    $(document).ready(function() {
+      //setFormValidation('#form-lancer-projet');
+      setFormValidation('#form-autre');
+    });
 </script>
 
 

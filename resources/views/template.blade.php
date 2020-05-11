@@ -20,50 +20,67 @@
     @include('includeCss')
 
 </head>
+
+
 <body>
 
 
 <!-- Main navigation -->
-
 @if (!$isContact)
 <header>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   
       <div class="container">
   
         <a class="navbar-brand font-montserrart" href="#">AC GROUP</a>
-  
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
   
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-  
           <ul class="navbar-nav ml-auto smooth-scroll">
-            <li class="nav-item active-nav">
+
+            <li class="nav-item @if($namePage=='accueil') active-nav @endif">
                 <a class="nav-link text-uppercase" href="{{ url('')}}">Accueil
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item active-nav">
+
+            <li class="nav-item @if($namePage=='vision') active-nav @endif">
               <a class="nav-link text-uppercase" href="{{ url('/vision')}}">Notre vision
                   <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item item-link">
+
+            <li class="nav-item @if($namePage=='expertises') active-nav @endif">
               <a class="nav-link text-uppercase" href="{{ url('expertises') }}" data-offset="90">Expertise</a>
             </li>
-            <li class="nav-item item-link">
+
+            <li class="nav-item @if($namePage=='faq') active-nav @endif">
               <a class="nav-link text-uppercase" href="{{ url('faq') }}" data-offset="90">Faq</a>
             </li>
-            <li class="nav-item item-link">
+
+            <li class="nav-item @if($namePage=='contact') active-nav @endif">
               <a class="nav-link text-uppercase" href="{{ url('contact') }}" data-offset="90">Contact</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url('') }}">
+                  <img src="{{asset('images/fr.svg')}}" alt="">
+              </a>
+            </li>
+    
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('') }}">
+                  <img src="{{asset('images/en.svg')}}" alt="">
+                </a>
+            </li>
+
           </ul>
-  
         </div>
   
       </div>
@@ -100,48 +117,64 @@
 
     </div>
 
-    <img src="{{asset('images/ARC.png')}}" class="bottom-img"/>
 
 </header>
 
 
 @else
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
   <div class="container">
   
     <a class="navbar-brand font-montserrart" href="#">AC GROUP</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto smooth-scroll">
-        <li class="nav-item active-nav">
+
+        <li class="nav-item">
             <a class="nav-link text-uppercase" href="{{ url('')}}">Accueil
                 <span class="sr-only">(current)</span>
             </a>
         </li>
-        <li class="nav-item active-nav">
+
+        <li class="nav-item">
           <a class="nav-link text-uppercase" href="{{ url('/vision')}}">Notre vision
               <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li class="nav-item item-link">
+
+        <li class="nav-item">
           <a class="nav-link text-uppercase" href="{{ url('expertises') }}" data-offset="90">Expertise</a>
         </li>
-        <li class="nav-item item-link">
+
+        <li class="nav-item @if($namePage=='faq') active-nav @endif">
           <a class="nav-link text-uppercase" href="{{ url('faq') }}" data-offset="90">Faq</a>
         </li>
-        <li class="nav-item item-link">
+
+        <li class="nav-item @if($namePage=='contact') active-nav @endif">
           <a class="nav-link text-uppercase" href="{{ url('contact') }}" data-offset="90">Contact</a>
         </li>
-      </ul>
 
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('') }}">
+              <img src="{{asset('images/fr.svg')}}" alt="">
+          </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('') }}">
+              <img src="{{asset('images/en.svg')}}" alt="">
+            </a>
+        </li>
+
+      </ul>
     </div>
 
   </div>
@@ -149,11 +182,10 @@
 </nav>
 <!-- Navbar -->
 @endif
-
-
 <!-- Main navigation -->
 
-<h4 data-animate-scroll='{"duration": "1","scaleX": "0","scaleY": "0"}'></h4>
+
+
 
 
 {{-- Contenu du site --}}
@@ -164,41 +196,39 @@
 
 
 
+
+
 <!--Footer-->
 <footer class="page-footer text-center orange darken-1 font-small">
 
     <div class="mt-4">
 
         <div class="pt-5">
-
-          <p class="h4 mb-4">Vous souhaitez lancer votre projet?</p>
-
-          <a class="btn btn-outline-white animated zoomIn infinite"
-            href="{{url('/contact')}}" target="_blank" role="button">Nous contacter
-          </a>
-          
+            <p class="h4 mb-4">Vous souhaitez lancer votre projet?</p>
+            <a class="btn btn-outline-white animated zoomIn infinite"
+              href="{{url('/contact')}}" target="_blank" role="button">Nous contacter
+            </a>
         </div>
 
         <hr class="my-4">
 
         <!-- Social icons -->
         <div class="pb-4">
-          <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-            <i class="fab fa-facebook-f mr-3"></i>
-          </a>
+            <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+              <i class="fab fa-facebook-f mr-3"></i>
+            </a>
 
-          <a href="https://twitter.com/MDBootstrap" target="_blank">
-            <i class="fab fa-twitter mr-3"></i>
-          </a>
+            <a href="https://twitter.com/MDBootstrap" target="_blank">
+              <i class="fab fa-twitter mr-3"></i>
+            </a>
 
-          <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
-            <i class="fab fa-youtube mr-3"></i>
-          </a>
+            <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+              <i class="fab fa-youtube mr-3"></i>
+            </a>
 
-          <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
-            <i class="fab fa-google-plus-g mr-3"></i>
-          </a>
-
+            <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+              <i class="fab fa-google-plus-g mr-3"></i>
+            </a>
         </div>
         <!-- Social icons -->
 
