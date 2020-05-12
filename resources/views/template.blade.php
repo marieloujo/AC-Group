@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 
     <meta charset='utf-8'>
@@ -45,37 +45,41 @@
           <ul class="navbar-nav ml-auto smooth-scroll">
 
             <li class="nav-item @if($namePage=='accueil') active-nav @endif">
-                <a class="nav-link text-uppercase" href="{{ url('')}}">Accueil
+                <a class="nav-link text-uppercase" href="{{ url('')}}"> {{ trans('sentences.nav.accueil')}}
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
 
             <li class="nav-item @if($namePage=='vision') active-nav @endif">
-              <a class="nav-link text-uppercase" href="{{ url('/vision')}}">Notre vision
+              <a class="nav-link text-uppercase" href="{{ url('/vision')}}">
+                {{ trans('sentences.nav.vision')}}
                   <span class="sr-only">(current)</span>
               </a>
             </li>
 
             <li class="nav-item @if($namePage=='expertises') active-nav @endif">
-              <a class="nav-link text-uppercase" href="{{ url('expertises') }}" data-offset="90">Expertise</a>
+              <a class="nav-link text-uppercase" href="{{ url('expertises') }}" data-offset="90">
+                {{ trans('sentences.nav.expertise')}}</a>
             </li>
 
             <li class="nav-item @if($namePage=='faq') active-nav @endif">
-              <a class="nav-link text-uppercase" href="{{ url('faq') }}" data-offset="90">Faq</a>
+              <a class="nav-link text-uppercase" href="{{ url('faq') }}" data-offset="90">
+                {{ trans('sentences.nav.faq')}}</a>
             </li>
 
             <li class="nav-item @if($namePage=='contact') active-nav @endif">
-              <a class="nav-link text-uppercase" href="{{ url('contact') }}" data-offset="90">Contact</a>
+              <a class="nav-link text-uppercase" href="{{ url('contact') }}" data-offset="90">
+                {{ trans('sentences.nav.contact')}}</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('') }}">
+              <a class="nav-link" href="{{ url('lang','fr') }}">
                   <img src="{{asset('images/fr.svg')}}" alt="">
               </a>
             </li>
     
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('') }}">
+                <a class="nav-link" href="{{ url('lang','en') }}">
                   <img src="{{asset('images/en.svg')}}" alt="">
                 </a>
             </li>
@@ -97,14 +101,13 @@
 
             <div class="col-md-12 mb-4 white-text animated text-center wow flipInX">
 
-              <h4 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5"> @yield('intro-title') {{--$introTitle--}}</h3>
+              <h4 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5"> @yield('intro-title')</h4>
               <hr class="hr-light my-4 w-75">
-              <h5 class="subtext-header mt-2 mb-4"> @yield('intro-description')
-                {{--$introDescription--}}</h4>
+              <h5 class="subtext-header mt-2 mb-4"> @yield('intro-description')</h5>
               
               
               <a href="#!" class="btn btn-rounded btn-outline-white">
-                <!--i class="fas fa-plus"></i--> <span class="font-weight-bold">Nous contacter</span>
+                 <span class="font-weight-bold">@yield('button-title')</span>
               </a>
   
             </div>
@@ -138,38 +141,42 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto smooth-scroll">
 
-        <li class="nav-item">
-            <a class="nav-link text-uppercase" href="{{ url('')}}">Accueil
-                <span class="sr-only">(current)</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-uppercase" href="{{ url('/vision')}}">Notre vision
+        <li class="nav-item @if($namePage=='accueil') active-nav @endif">
+          <a class="nav-link text-uppercase" href="{{ url('')}}"> {{ trans('sentences.nav.accueil')}}
               <span class="sr-only">(current)</span>
           </a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link text-uppercase" href="{{ url('expertises') }}" data-offset="90">Expertise</a>
+        <li class="nav-item @if($namePage=='vision') active-nav @endif">
+          <a class="nav-link text-uppercase" href="{{ url('/vision')}}">
+            {{ trans('sentences.nav.vision')}}
+              <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <li class="nav-item @if($namePage=='expertises') active-nav @endif">
+          <a class="nav-link text-uppercase" href="{{ url('expertises') }}" data-offset="90">
+            {{ trans('sentences.nav.expertise')}}</a>
         </li>
 
         <li class="nav-item @if($namePage=='faq') active-nav @endif">
-          <a class="nav-link text-uppercase" href="{{ url('faq') }}" data-offset="90">Faq</a>
+          <a class="nav-link text-uppercase" href="{{ url('faq') }}" data-offset="90">
+            {{ trans('sentences.nav.faq')}}</a>
         </li>
 
         <li class="nav-item @if($namePage=='contact') active-nav @endif">
-          <a class="nav-link text-uppercase" href="{{ url('contact') }}" data-offset="90">Contact</a>
+          <a class="nav-link text-uppercase" href="{{ url('contact') }}" data-offset="90">
+            {{ trans('sentences.nav.contact')}}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('') }}">
+          <a class="nav-link" href="{{ url('lang','fr') }}">
               <img src="{{asset('images/fr.svg')}}" alt="">
           </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('') }}">
+            <a class="nav-link" href="{{ url('lang','en') }}">
               <img src="{{asset('images/en.svg')}}" alt="">
             </a>
         </li>
@@ -204,9 +211,9 @@
     <div class="mt-4">
 
         <div class="pt-5">
-            <p class="h4 mb-4">Vous souhaitez lancer votre projet?</p>
+            <p class="h4 mb-4">{{ trans('sentences.footer.titre')}}</p>
             <a class="btn btn-outline-white animated zoomIn infinite"
-              href="{{url('/contact')}}" target="_blank" role="button">Nous contacter
+              href="{{url('/contact')}}" target="_blank" role="button"> {{ trans('sentences.footer.button')}}
             </a>
         </div>
 

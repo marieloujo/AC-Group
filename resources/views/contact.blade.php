@@ -2,7 +2,7 @@
 @extends('template')
 
 @section('titre')
-    Nous Contacter
+{{ trans('sentences.pages.contact.titre')}}
 @endsection
 
 
@@ -16,159 +16,6 @@
 
 @section('contenu')
 
-{{--
-<div class="container-fluid my-5 py-5">
-
-
-    <!--Section: Content-->
-    <section class="text-center px-md-5 mx-md-5 dark-grey-text">
-  
-        <!-- Section heading -->
-        <h3 class="font-weight-bold mb-4">Nous Contacter</h3>
-        <!-- Section description -->
-        <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
-            eum porro a pariatur veniam.</p>
-    
-        <!-- Grid row -->
-        <div class="row">
-    
-            <!-- Grid column -->
-            <div class="col-md-9 mb-md-0 mb-5 ">
-    
-            <form action="{{route('sendMail')}}" method="POST">
-                
-                {{ csrf_field() }}
-
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" name="name" id="contact-name" class="form-control">
-                            <label for="contact-name" class="">Votre nom et prénoms</label>
-
-                            @if ($errors->has('name')) <span class="bmd-help text-muted text-danger float-left">
-                                {{ $errors->first('name') }}</span> @endif
-
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-        
-                </div>
-                <!-- Grid row -->
-
-                <!-- Grid row -->
-                <div class="row">
-        
-                    <!-- Grid column -->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="number" name="telephone" id="contact-tel" class="form-control">
-                            <label for="contact-tel" class="">Votre Téléphone</label>
-
-                            @if ($errors->has('telephone')) <span class="bmd-help text-danger float-left">
-                                {{ $errors->first('telephone') }}</span> @endif
-
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-        
-                    <!-- Grid column -->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" name="email" id="contact-email" class="form-control">
-                            <label for="contact-email" class="">Votre email</label>
-
-                            @if ($errors->has('email')) <span class="bmd-help text-danger float-left">
-                                {{ $errors->first('email') }}</span> @endif
-
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-        
-                </div>
-                <!-- Grid row -->
-        
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" name="object" id="contact-Subject" class="form-control">
-                            <label for="contact-Subject" class="">Object du message</label>
-
-                            @if ($errors->has('object')) <span class="bmd-help text-danger float-left">
-                                {{ $errors->first('object') }}</span> @endif
-
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-    
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <textarea id="contact-message" name="message" class="form-control md-textarea" rows="3"></textarea>
-                            <label for="contact-message">Corps du message</label>
-
-                            @if ($errors->has('message')) <span class="bmd-help text-danger float-left">
-                                {{ $errors->first('message') }}</span> @endif
-
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-
-                <div class="text-center text-md-left">
-                    <button type="submit" class="btn warning-color-dark font-weight-bold text-white btn-md btn-rounded">Envoyer</button>
-                </div>
-    
-            </form>
-        
-                
-    
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-3 text-center ">
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a type="button" class="btn btn-link" href="https://wa.me/+0123456789">
-                            <i class="fas fa-map-marker-alt fa-2x text-warning"></i>
-                            <p>WHATSAPP</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a type="button" class="btn btn-link" href="tel:+ 01 234 567 89">
-                            <i class="fas fa-phone fa-2x mt-4 text-warning"></i>
-                            <p>TÉLÉPHONE</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a type="button" class="btn btn-link" href="tel:+ 01 234 567 89">
-                            <i class="fas fa-envelope fa-2x mt-4 text-warning"></i>
-                            <p class="mb-0">EMAIL</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Grid column -->
-    
-        </div>
-        <!-- Grid row -->
-  
-    </section>
-    <!--Section: Content-->
-
-  
-</div>--}}
-
 
 <div class="container-fluid pt-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s">
 
@@ -178,19 +25,18 @@
             
             <div class="col-md-8 d-flex align-items-center" id="presentation-texte">
                 <div>
-                    <h2 class="info-text text-center font-weight-bold">N'hésitez pas à nous solliciter</h2>
+                    <h2 class="info-text text-center font-weight-bold">
+                        {{ trans('sentences.pages.contact.presentation.titre')}}</h2>
                     <p class="text-center lead">
-                        Vous souhaitez des renseignements sur nos offres? 
-                        Vous avez besoin de conseils sur une expertise? 
-                        Nous sommes à votre écoute pour répondre à vos 
-                        problématiques sans aucun engagement de votre part.
+                        {{ trans('sentences.pages.contact.presentation.description')}}
                     </p>
                 </div>
             </div>
 
             <div class="col-md-4 animated " id="presentation-illustration">
                 <div class="">
-                    <img src="{{asset('images/illustrations/contact_us.svg')}}" class="img-fluid" alt="smaple image">
+                    <img src="{{asset('images/illustrations/contact_us.svg')}}"
+                        class="img-fluid" alt="smaple image">
                 </div>
             </div>
 
@@ -199,6 +45,7 @@
     </section>
 
 </div>
+
 
 
 <div class="container pt-2 d-flex justify-content-center">
@@ -212,7 +59,7 @@
                     <i class="fab fa-whatsapp text-white"></i>
                 </button>
 
-                <p class="mt-3">WHATSAPP</p>
+                <p class="mt-3">{{ trans('sentences.pages.contact.contact.whatsapp')}}</p>
             </a>
 
         </div>
@@ -222,7 +69,7 @@
                     <i class="fas fa-phone text-white"></i>
                 </button>
 
-                <p class="mt-3">TÉLÉPHONE</p>
+                <p class="mt-3">{{ trans('sentences.pages.contact.contact.tel')}}</p>
             </a>
         </div>
         <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="1.0s">
@@ -230,7 +77,7 @@
                 <button class="btn btn-orange btn-fab  btn-round">
                     <i class="fas fa-envelope text-white"></i>
                 </button>
-                <p class="mt-3">EMAIL</p>
+                <p class="mt-3">{{ trans('sentences.pages.contact.contact.email')}}</p>
             </a>
         </div>
     </div>
@@ -247,8 +94,10 @@
         <div class="card wizard-card" data-color="orange" id="wizard">
             <div class="wizard-navigation">
                 <ul>
-                    <li class="py-2 "><a href="#send-mail" data-toggle="tab">Lancer votre projet</a></li>
-                    <li class="py-2"><a href="#send-simple-mail" data-toggle="tab">Autres</a></li>
+                    <li class="py-2 "><a href="#send-mail" data-toggle="tab">
+                        {{ trans('sentences.pages.contact.formulaire.form-1.navigation-titre')}}</a></li>
+                    <li class="py-2"><a href="#send-simple-mail" data-toggle="tab">
+                        {{ trans('sentences.pages.contact.formulaire.form-2.navigation-titre')}}</a></li>
                 </ul>
             </div>
 
@@ -262,10 +111,14 @@
                         <div class="row">
 
                             <div class="col-md-6">
-                                <h5 class="info-text font-weight-bold">Informations générales</h5>
+                                <h5 class="info-text font-weight-bold">
+                                    {{ trans('sentences.pages.contact.formulaire.form-1.sections.1.titre')}}
+                                </h5>
 
                                 <div class="form-group label-floating col-md-12">
-                                    <label class="control-label">Nom et prénoms</label>
+                                    <label class="control-label">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.1.inputs.1.label')}}
+                                    </label>
                                     <input name="name" type="text" class="form-control col-md-12" 
                                         id="name">
 
@@ -278,7 +131,8 @@
 
 
                                 <div class="form-group label-floating col-md-12">
-                                    <label class="control-label">Adresse email</label>
+                                    <label class="control-label">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.1.inputs.2.label')}}</label>
                                     <input name="mail" type="email" class="form-control col-md-12">
 
                                     @if ($errors->has('mail')) 
@@ -290,16 +144,20 @@
 
 
                                 <div class="form-group label-floating col-md-12">
-                                    <label class="control-label">Société</label>
+                                    <label class="control-label">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.1.inputs.3.label')}}</label>
                                     <input name="societe" type="text" class="form-control col-md-12">
                                 </div>
 
 
-                                <h5 class="info-text font-weight-bold pt-5">Message</h5>
+                                <h5 class="info-text font-weight-bold pt-5">
+                                    {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.titre')}}
+                                </h5>
 
 
                                 <div class="form-group label-floating col-md-12">
-                                    <label class="control-label">Message</label>
+                                    <label class="control-label">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.1.label')}}</label>
                                     <textarea name="message" class="form-control" placeholder="" rows="5"></textarea>
 
                                     @if ($errors->has('message')) 
@@ -313,7 +171,8 @@
                                     <div class="custom-file">
                                     <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
                                         aria-describedby="inputGroupFileAddon01">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choisir un  fichier</label>
+                                    <label class="custom-file-label" for="inputGroupFile01">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.2.label')}}</label>
                                     </div>
                                 </div>
 
@@ -321,7 +180,8 @@
                             </div>
 
                             <div class="col-md-6">
-                                <h5 class="info-text font-weight-bold">Vos besoin</h5>
+                                <h5 class="info-text font-weight-bold">
+                                    {{ trans('sentences.pages.contact.formulaire.form-1.sections.3.titre')}}</h5>
 
                                 <div class="row">
 
@@ -332,7 +192,8 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" value="Data Analytics & web marketing">
                                                 </label>
-                                                <span class="font-montserrart">Data Analytics & web marketing</span>
+                                                <span class="font-montserrart">
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}</span>
                                             </div>
                                         </div>
 
@@ -341,7 +202,8 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" value="Référencement & SEO">
                                                 </label>
-                                                <span class="font-montserrart">Référencement & SEO</span>
+                                                <span class="font-montserrart">
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}</span>
                                             </div>
                                         </div>
 
@@ -350,7 +212,8 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" value="Politique de gestion financière">
                                                 </label>
-                                                <span class="font-montserrart">Politique de gestion financière</span>
+                                                <span class="font-montserrart">
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}</span>
                                             </div>
                                         </div>
 
@@ -359,7 +222,8 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" value="Expertise et audit technique">
                                                 </label>
-                                                <span class="font-montserrart">Expertise et audit technique</span>
+                                                <span class="font-montserrart">
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}</span>
                                             </div>
                                         </div>
 
@@ -370,7 +234,7 @@
                                                         value="Étude éclairage extérieur, intérieur et architectural">
                                                 </label>
                                                 <span class="font-montserrart">
-                                                    Étude éclairage extérieur, intérieur et architectural
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
                                                 </span>
                                             </div>
                                         </div>
@@ -386,8 +250,8 @@
                                                     <input type="checkbox" name="besoins[]"
                                                         value="Assistance à maîtrise d’ouvrage ou maîtrise d’œuvre">
                                                 </label>
-                                                <span class="font-montserrart">Assistance à maîtrise d’ouvrage
-                                                    ou maîtrise d’œuvre</span>
+                                                <span class="font-montserrart">
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}</span>
                                             </div>
                                         </div>
 
@@ -397,8 +261,8 @@
                                                     <input type="checkbox" name="besoins[]" 
                                                         value="Étude statique et dynamique des réseaux Haute Tension">
                                                 </label>
-                                                <span class="font-montserrart">Étude statique et dynamique des
-                                                    réseaux Haute Tension</span>
+                                                <span class="font-montserrart">
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.4.title')}}</span>
                                             </div>
                                         </div>
 
@@ -410,8 +274,7 @@
                                                          réseaux Haute Tension et Basse Tension">
                                                 </label>
                                                 <span class="font-montserrart">
-                                                    Plan de protection et note de calculs des réseaux
-                                                    Haute Tension et Basse Tension
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.5.title')}}
                                                 </span>
                                             </div>
                                         </div>
@@ -423,7 +286,7 @@
                                                         value="Rétrofit des équipements électriques Haute et Basse Tension">
                                                 </label>
                                                 <span class="font-montserrart">
-                                                    Rétrofit des équipements électriques Haute et Basse Tension
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.6.title')}}
                                                 </span>
                                             </div>
                                         </div>
@@ -435,7 +298,7 @@
                                                         value="Étude d’exécution des installations électriques">
                                                 </label>
                                                 <span class="font-montserrart">
-                                                    Étude d’exécution des installations électriques
+                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.7.title')}}
                                                 </span>
                                             </div>
                                         </div>
@@ -446,60 +309,10 @@
 
                             </div>
 
-
-                            <!--div class="col-sm-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">email</i>
-                                    </span>
-                                    <div class="form-group label-floating">
-                                            <label class="control-label">Your Email</label>
-                                            <input name="name" type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">lock_outline</i>
-                                    </span>
-                                    <div class="form-group label-floating">
-                                            <label class="control-label">Your Password</label>
-                                            <input name="name2" type="password" class="form-control">
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Country</label>
-                                    <select class="form-control">
-                                        <option disabled="" selected=""></option>
-                                        <option value="Afghanistan"> Afghanistan </option>
-                                        <option value="Albania"> Albania </option>
-                                        <option value="Algeria"> Algeria </option>
-                                        <option value="American Samoa"> American Samoa </option>
-                                        <option value="Andorra"> Andorra </option>
-                                        <option value="Angola"> Angola </option>
-                                        <option value="Anguilla"> Anguilla </option>
-                                        <option value="Antarctica"> Antarctica </option>
-                                        <option value="...">...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Daily Budget</label>
-                                    <select class="form-control">
-                                        <option disabled="" selected=""></option>
-                                        <option value="Afghanistan"> < $100 </option>
-                                        <option value="Albania"> $100 - $499 </option>
-                                        <option value="Algeria"> $499 - $999 </option>
-                                        <option value="American Samoa"> $999+ </option>
-                                    </select>
-                                </div>
-                            </div-->
                         </div>
 
                         <button type='submit' class='btn btn-orange float-right btn-wd font-weight-bold' 
-                            name='envoyer'>Envoyer</button>
+                            name='envoyer'>{{ trans('sentences.pages.contact.formulaire.button')}}</button>
 
                     </form>
                 </div>
@@ -517,7 +330,9 @@
                                 <div class="row col-md-12">
 
                                     <div class="form-group label-floating col-md-6">
-                                        <label class="control-label">Nom et prénoms</label>
+                                        <label class="control-label">
+                                            {{ trans('sentences.pages.contact.formulaire.form-1.sections.1.inputs.1.label')}}
+                                        </label>
                                         <input name="name-simple" type="text" class="form-control col-md-12" required=true>
 
                                         @if ($errors->has('name-simple')) 
@@ -528,7 +343,9 @@
 
 
                                     <div class="form-group label-floating col-md-6">
-                                        <label class="control-label">Adresse email</label>
+                                        <label class="control-label">
+                                            {{trans('sentences.pages.contact.formulaire.form-1.sections.1.inputs.2.label')}}
+                                        </label>
                                         <input name="mail-simple" type="email" class="form-control col-md-12" required=true>
 
                                         @if ($errors->has('mail-simple')) 
@@ -539,11 +356,14 @@
 
                                 </div>
 
-                                <h5 class="info-text col-md-12 font-weight-bold pt-5">Message</h5>
+                                <h5 class="info-text col-md-12 font-weight-bold pt-5">
+                                    {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.titre')}}</h5>
 
 
                                 <div class="form-group label-floating col-md-12">
-                                    <label class="control-label">Message</label>
+                                    <label class="control-label">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.1.label')}}
+                                    </label>
                                     <textarea class="form-control" required=true name="message-simple" placeholder="" rows="5"></textarea>
                                 
                                     @if ($errors->has('mesage-simple')) 
@@ -556,7 +376,9 @@
                                     <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="inputGroupFile01"
                                         aria-describedby="inputGroupFileAddon01" name="file">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choisir un  fichier</label>
+                                    <label class="custom-file-label" for="inputGroupFile01">
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.2.label')}}
+                                    </label>
                                     </div>
                                 </div>
 
@@ -565,7 +387,7 @@
                         </div>
 
                         <button type='submit' class='btn btn-orange float-right btn-wd font-weight-bold'
-                            name='envoyer'>Envoyer</button>
+                            name='envoyer'>{{ trans('sentences.pages.contact.formulaire.button')}}</button>
 
                     </form>
                 </div>

@@ -1,8 +1,11 @@
 
+
+
+
 @extends('template')
 
 @section('titre')
-    Accueil | AC GROUP
+    {{ trans('sentences.pages.accueil.titre')}}
 @endsection
 
 
@@ -14,10 +17,13 @@
     @endsection
 
     @section('intro-description')
-        Nous accompagnons nos clients dans la création de leur identité numérique
-        et également la gestion financière.
+        {{ trans('sentences.pages.accueil.intro.description')}}
     @endsection
 
+
+    @section('button-title')
+        {{ trans('sentences.pages.accueil.intro.button')}}
+    @endsection
 
     <!--Section: Présentation-->
     <div class="container-fluid mb-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s"  id="presentation" >
@@ -36,16 +42,10 @@
                 <div class="col-md-5 d-flex align-items-center" id="presentation-texte">
                     <div>
                         
-                        <h3 class="font-weight-bold mb-4">INNOVATION ET UTILITÉ</h3>
+                        <h3 class="font-weight-bold mb-4">{{ trans('sentences.pages.accueil.presentation.title')}}</h3>
             
                         <p class="text-justify">
-                            Nous accompagnons nos clients dans la création de leur identité numérique
-                            et également la gestion financière. AC Communication répond à tous vos
-                            besoins et est en mesure d'élaborer une véritable stratégie de communication
-                            digitale. Notre pôle d’ingénierie électrique AC Services intervient dans 
-                            l’installation, la maintenance, la rénovation et l’extension de votre réseau
-                            électrique. Nous œuvrons aussi dans le domaine des énergies renouvelables à
-                            travers la mise en place des installations solaires photovoltaïques.
+                            {{ trans('sentences.pages.accueil.presentation.description')}}
                         </p>
             
                     </div>
@@ -64,12 +64,10 @@
     <!--Section: Expertises-->
     <div class="container-fluid mt-5 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
 
-        <h3 class="font-weight-bold text-center">Nos services</h3>
+        <h3 class="font-weight-bold text-center">{{ trans('sentences.pages.accueil.expertises.presentation.title')}}</h3>
         <hr class="w-header my-4">
         <p class="text-muted lead mx-auto mb-5 col-lg-12 text-center">
-            Nous sommes une structure organisée en deux pôles: AC Communication intervenant dans le
-            webmarketing, les stratégies de communication, de gestion financière et AC Services spécialisé
-            dans l’ingénierie électrique.
+            {{ trans('sentences.pages.accueil.expertises.presentation.description')}}
         </p>
 
     </div>
@@ -80,12 +78,10 @@
         <section class="p-md-3 mx-md-5 mb-4" id="expertises-communication">
 
             <div class="container text-center pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                <h5 class="font-weight-bold mb-2">AC Communication</h5>
+                <h5 class="font-weight-bold mb-2">{{ trans('sentences.pages.accueil.expertises.poles.1.title')}}</h5>
     
                 <p class="text-muted text-center pt-2">
-                    Construisons ensemble les solutions de demain. Apportons une visibilité accrue à vos idées, projets 
-                    grâce aux meilleures stratégies de communication créatives, éprouvées sur des projets ambitieux.
-                </p>
+                    {{ trans('sentences.pages.accueil.expertises.poles.1.description')}}</p>
             </div>
 
             <div class="row pt-5 pb-5">
@@ -96,22 +92,20 @@
                         <li class="timeline-element">
                             <div class="row mb-5 d-flex align-items-center">
 
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" data-duration="1.0s" data-delay="0.1s">
+                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" 
+                                    data-duration="1.0s" data-delay="0.1s">
                                     <div class="card">
                                         <div class="card-header white">
                                             <h5 class="font-weight-bold mb-0 py-2 ">
-                                                Data Analytics & web marketing
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}
                                             </h5>
                                         </div>
                                         <div class="card-body">
                                             <p class="card-text text-justify">
-                                                Connaître votre marché et les tendances du moment. Être conseillé par des
-                                                experts en communication web et être épaulé par des graphistes dédiés pour
-                                                votre projet. De l'expression de vos besoins aux conseils permettant de mieux
-                                                exprimer votre identité visuelle, GROUP vous accompagne et vous conseille
-                                                sur la base d’un audit préalablement réalisé.
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.description')}}
                                             </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#first-section">En savoir plus
+                                            <a class="blue-text font-weight-bold" href="/expertises#first-section">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
                                             </a> 
                                         </div>
@@ -120,7 +114,8 @@
             
                                 <div class="col-md-6 col-lg-4 animate">
                                     <div class="overlay">
-                                        <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}" class="img-fluid"
+                                        <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                         class="img-fluid"
                                         alt="Sample project image" />
                                         <a href="#">
                                         </a>
@@ -131,10 +126,10 @@
                         </li>
             
                         <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center contenjustify-t-end">
+                            <div class="row mb-5 d-flex align-items-center justify-content-end">
                             
                                 <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay">
+                                    <div class="overlay rounded z-depth-1">
                                         <img src="{{asset('images/illustrations/seo.svg')}}" class="img-fluid"
                                         alt="Sample project image" />
                                         <a href="#">
@@ -147,16 +142,15 @@
                                     <div class="card">
                                         <div class="card-header white">
                                             <h5 class="font-weight-bold mb-0 py-2">
-                                                Référencement & SEO
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}
                                             </h5>
                                         </div>
                                         <div class="card-body">
                                             <p class="card-text text-justify">
-                                                Le référencement a pour objectif d'intégrer, de positionner et de maintenir
-                                                votre site internet en tête des classements des moteurs de recherche afin de
-                                                générer le plus fort trafic.
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.description')}}
                                             </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">En savoir plus
+                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
                                             </a>
                                         </div>
@@ -173,17 +167,15 @@
                                     <div class="card">
                                         <div class="card-header white">
                                             <h5 class="font-weight-bold mb-0 py-2">
-                                                Politique de gestion financière
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}
                                             </h5>
                                         </div>
                                         <div class="card-body ">
                                             <p class="card-text text-justify">
-                                                Un accompagnement sur-mesure et intensif pour prendre du recul sur vos
-                                                finances et augmenter votre rentabilité. Nous réaliserons un diagnostic
-                                                financier complet de vos activités, l’édition d’un plan d’action adapté pour
-                                                améliorer vos performances économiques.
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.description')}}
                                             </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">En savoir plus
+                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
                                             </a>
                                         </div>
@@ -202,7 +194,8 @@
             
                             </div>
                         </li>
-            
+
+                        
                     </ol>
         
                 </div>
@@ -210,7 +203,9 @@
 
             <div class="text-center pb-5">
                 <a href="{{url('/expertises#ac-communication')}}">
-                    <button type="button" class="btn btn-outline-warning waves-effect">Lire plus ...</button>
+                    <button type="button" class="btn btn-outline-warning waves-effect">
+                        {{ trans('sentences.pages.accueil.expertises.poles.1.button')}}
+                    </button>
                 </a>
             </div>
 
@@ -220,12 +215,10 @@
         <section class="p-md-3 mx-md-5 mt-5" id="expertises-services">
 
             <div class="container text-center pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                <h5 class="font-weight-bold mb-2">AC Services</h5>
+                <h5 class="font-weight-bold mb-2">{{ trans('sentences.pages.accueil.expertises.poles.2.title')}}</h5>
     
                 <p class="text-muted text-center pt-2">
-                    Modernisons vos installations électriques. Notre expertise se concentre sur
-                    l’électricité simple et complexe. L’installation, le suivi, des réseaux haute et
-                    basse tension en fonction de l’usager et de l’usage prévu.
+                    {{ trans('sentences.pages.accueil.expertises.poles.2.description')}}
                 </p>
             </div>
 
@@ -241,7 +234,7 @@
                                     <div class="card">
                                         <div class="card-header white">
                                             <h5 class="font-weight-bold mb-0 py-2 ">
-                                                Expertise et audit technique
+                                                {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}
                                             </h5>
                                         </div>
                                         <div class="card-body">
@@ -251,7 +244,8 @@
                                                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                                                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                             </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#first-section">En savoir plus
+                                            <a class="blue-text font-weight-bold" href="/expertises#first-section">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
                                             </a> 
                                         </div>
@@ -287,7 +281,7 @@
                                     <div class="card">
                                         <div class="card-header white">
                                             <h5 class="font-weight-bold mb-0 py-2">
-                                                Assistance à maîtrise d’ouvrage ou maîtrise d’œuvre
+                                                {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
                                             </h5>
                                         </div>
                                         <div class="card-body">
@@ -297,7 +291,8 @@
                                                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                                                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                             </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">En savoir plus
+                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
                                             </a>
                                         </div>
@@ -314,7 +309,7 @@
                                     <div class="card">
                                         <div class="card-header white">
                                             <h5 class="font-weight-bold mb-0 py-2">
-                                                Étude statique et dynamique des réseaux Haute Tension
+                                                {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}
                                             </h5>
                                         </div>
                                         <div class="card-body">
@@ -324,7 +319,8 @@
                                                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                                                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                             </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">En savoir plus
+                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
                                             </a>
                                         </div>
@@ -352,7 +348,8 @@
 
             <div class="text-center pb-5">
                 <a href="{{url('/expertises#ac-services')}}">
-                    <button type="button" class="btn btn-outline-warning waves-effect">Lire plus ...</button>
+                    <button type="button" class="btn btn-outline-warning waves-effect">
+                        {{ trans('sentences.pages.accueil.expertises.poles.1.button')}}</button>
                 </a>
             </div>
 
@@ -371,7 +368,7 @@
         <section class="p-md-3 mx-md-5">
 
             <div class="animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s">
-                <h3 class="font-weight-bold mt-5 text-center">Nos Technologies​</h3>
+                <h3 class="font-weight-bold mt-5 text-center">{{ trans('sentences.pages.accueil.technologies​.titre')}}​</h3>
                 <hr class="w-header my-4">
                 
                 <div class="row d-flex justify-content-between align-items-center" >
@@ -443,7 +440,7 @@
     <!--Section: Témoignages-->
     <div class="container-fluid mt-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s">
 
-        <h3 class="font-weight-bold mt-5 text-center">Témoignage</h3>
+        <h3 class="font-weight-bold mt-5 text-center">{{ trans('sentences.pages.accueil.temoignages​.titre')}}</h3>
         <hr class="w-header my-4">
 
         <div class="container-fluid my-3 px-5 pb-3">

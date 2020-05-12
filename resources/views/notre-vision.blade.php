@@ -3,7 +3,7 @@
 @extends('template')
 
 @section('titre')
-    Notre vision | AC GROUP
+    {{ trans('sentences.pages.vision.titre')}}
 @endsection
 
 
@@ -11,11 +11,16 @@
 
 
     @section('intro-title')
-        Fiable - Réactif - Agile
+        {{ trans('sentences.pages.vision.intro.title')}}
     @endsection
 
     @section('intro-description')
-        Chaque utilisateur mérite une expérience exceptionnelle.
+        {{ trans('sentences.pages.vision.intro.description')}}
+    @endsection
+
+
+    @section('button-title')
+        {{ trans('sentences.pages.vision.intro.button')}}
     @endsection
 
 
@@ -29,13 +34,7 @@
                 <div class="col-md-8 d-flex align-items-center" id="presentation-texte">
                     <div>
                         <p class="text-center lead">
-                            Nous accompagnons nos clients dans la création de leur identité numérique
-                            et également la gestion financière. AC Communication répond à tous vos
-                            besoins et est en mesure d'élaborer une véritable stratégie de communication
-                            digitale. Notre pôle d’ingénierie électrique AC Services intervient dans 
-                            l’installation, la maintenance, la rénovation et l’extension de votre réseau
-                            électrique. Nous œuvrons aussi dans le domaine des énergies renouvelables à
-                            travers la mise en place des installations solaires photovoltaïques.
+                            {{ trans('sentences.pages.vision.presentation.description')}}
                         </p>
                     </div>
                 </div>

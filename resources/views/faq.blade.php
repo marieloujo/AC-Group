@@ -3,7 +3,7 @@
 @extends('template')
 
 @section('titre')
-    Foire aux questions | AC GROUP
+    {{ trans('sentences.pages.faq.titre')}}
 @endsection
 
 
@@ -21,10 +21,12 @@
 
             <h6 class="font-weight-normal text-center text-uppercase font-small grey-text mb-4">FAQ</h6>
 
-            <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">Foire Aux Questions</h3>
+            <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">
+                {{ trans('sentences.pages.faq.faq.titre')}}</h3>
             <hr class="w-header">
             <!-- Section description -->
-            <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">Got a question? We've got answers. If you have some other questions, see our support center.</p>
+            <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">
+                {{ trans('sentences.pages.faq.faq.description')}}</p>
     
 
             <div class="row">
