@@ -223,6 +223,11 @@ button.close {
     background-color: #ef6c00;
 }
 
+
+.error{
+  color: red !important;
+}
+
 /*---------------- End ------------------*/
 
 

@@ -43,14 +43,26 @@ class MailBuilder extends Mailable
      */
     public function build()
     {
-        return $this->from(['address' => $this->email, 'name' => $this->name])
+
+        //dump($this->besoins).die();
+
+        $mail = $this->from(['address' => $this->email, 'name' => $this->name])
             ->to(env('CONTACT_EMAIL'))
-            ->attach($file)
-            ->view('emails.mail-vue', 
-                ['name'=>$this->message,
-                'societe' => $this->societe,
-                'besoins' => $this->besoins,
-                'contenu'=>$this->message]); 
+            ->subject('Contacter');
+
+        if($this->file != null) {
+            $mail->attach($this->file, [
+                'as' => $this->file,
+            ]);
+        }
+
+        return $mail->view('emails.mail-vue', 
+            ['name'=>$this->message,
+            'societe' => $this->societe,
+            'besoins' => $this->besoins,
+            'contenu'=>$this->message]); 
+
+    
     }
 
 

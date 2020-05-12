@@ -35,8 +35,10 @@
                       <b><u>Société</u> :</b> {{$societe}} <br><br>
                       <b><u>Beoins</u> :
                         <ul>
-                          <li>Coffee</li>
-                        </ul></b> {{$name}} <br><br>
+                          @foreach ($besoins as $besoin)
+                              <li>{{$besoin}}</li>
+                          @endforeach
+                        </ul>
 
                       {{$contenu}}
                   </div>

@@ -40,7 +40,8 @@ class SimpleMailBuilder extends Mailable
     {
 
         $email = $this->from(['address' => $this->email, 'name' => $this->name])
-            ->to(env('CONTACT_EMAIL'));
+            ->to(env('CONTACT_EMAIL'))
+            ->subject('Contacter');
 
             if($this->file != null) {
                 $email->attach($this->file, [

@@ -13,6 +13,7 @@
 @endsection
 
 
+
 @section('contenu')
 
 {{--
@@ -169,11 +170,11 @@
 </div>--}}
 
 
-<div class="container-fluid pt-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s" id="presentation">
+<div class="container-fluid pt-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s">
 
-    <section class="dark-grey-text container pt-3">
+    <section class="dark-grey-text container pt-5">
 
-        <div class="row pr-lg-5">
+        <div class="row pr-lg-5 pt-5">
             
             <div class="col-md-8 d-flex align-items-center" id="presentation-texte">
                 <div>
@@ -189,7 +190,7 @@
 
             <div class="col-md-4 animated " id="presentation-illustration">
                 <div class="">
-                    <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                    <img src="{{asset('images/illustrations/contact_us.svg')}}" class="img-fluid" alt="smaple image">
                 </div>
             </div>
 
@@ -205,7 +206,7 @@
     
 
     <div class="row col-md-12 pt-5 d-flex align-items-center">
-        <div class="col-md-4 text-center ">
+        <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="0.1s">
             <a class="btn-link" href="https://wa.me/+0123456789">
                 <button class="btn btn-orange btn-fab  btn-round">
                     <i class="fab fa-whatsapp text-white"></i>
@@ -215,7 +216,7 @@
             </a>
 
         </div>
-        <div class="col-md-4 text-center ">
+        <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="0.5s">
             <a class="btn-link" href="tel:+ 01 234 567 89">
                 <button class="btn btn-orange btn-fab  btn-round">
                     <i class="fas fa-phone text-white"></i>
@@ -224,7 +225,7 @@
                 <p class="mt-3">TÉLÉPHONE</p>
             </a>
         </div>
-        <div class="col-md-4 text-center ">
+        <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="1.0s">
             <a class="btn-link" href="mailto:contact.ac-group.com">
                 <button class="btn btn-orange btn-fab  btn-round">
                     <i class="fas fa-envelope text-white"></i>
@@ -237,21 +238,26 @@
 </div>
 
 
+
+
+
 <!--   Big container   -->
-<div class="container-fluid pb-5">
+<div class="container-fluid pb-5" id="form">
     <div class="wizard-container">
         <div class="card wizard-card" data-color="orange" id="wizard">
             <div class="wizard-navigation">
                 <ul>
-                    <li class="py-2 "><a href="#details" data-toggle="tab">Lancer votre projet</a></li>
-                    <li class="py-2"><a href="#captain" data-toggle="tab">Autres</a></li>
+                    <li class="py-2 "><a href="#send-mail" data-toggle="tab">Lancer votre projet</a></li>
+                    <li class="py-2"><a href="#send-simple-mail" data-toggle="tab">Autres</a></li>
                 </ul>
             </div>
 
             <div class="tab-content">
 
-                <div class="tab-pane" id="details">
-                    <form action="" method="POST" id="form-lancer-projet" enctype="multipart/form-data" >
+                <div class="tab-pane" id="send-mail">
+                    <form action="{{route('sendMail')}}" method="POST" id="form-lancer-projet" enctype="multipart/form-data" >
+
+                        {{ csrf_field() }}
 
                         <div class="row">
 
@@ -262,18 +268,30 @@
                                     <label class="control-label">Nom et prénoms</label>
                                     <input name="name" type="text" class="form-control col-md-12" 
                                         id="name">
+
+                                    @if ($errors->has('name')) 
+                                        <span class="bmd-help text-muted text-danger float-left">
+                                        {{ $errors->first('name') }}</span> 
+                                    @endif
+
                                 </div>
 
 
                                 <div class="form-group label-floating col-md-12">
                                     <label class="control-label">Adresse email</label>
-                                    <input name="name" type="email" class="form-control col-md-12">
+                                    <input name="mail" type="email" class="form-control col-md-12">
+
+                                    @if ($errors->has('mail')) 
+                                        <span class="bmd-help text-muted text-danger float-left">
+                                        {{ $errors->first('mail') }}</span> 
+                                    @endif
+
                                 </div>
 
 
                                 <div class="form-group label-floating col-md-12">
                                     <label class="control-label">Société</label>
-                                    <input name="name" type="text" class="form-control col-md-12">
+                                    <input name="societe" type="text" class="form-control col-md-12">
                                 </div>
 
 
@@ -282,12 +300,18 @@
 
                                 <div class="form-group label-floating col-md-12">
                                     <label class="control-label">Message</label>
-                                    <textarea class="form-control" placeholder="" rows="5"></textarea>
+                                    <textarea name="message" class="form-control" placeholder="" rows="5"></textarea>
+
+                                    @if ($errors->has('message')) 
+                                        <span class="bmd-help text-muted text-danger float-left">
+                                        {{ $errors->first('message') }}</span> 
+                                    @endif
+
                                 </div>
 
                                 <div class="input-group col-md-12 pt-5">
                                     <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
                                         aria-describedby="inputGroupFileAddon01">
                                     <label class="custom-file-label" for="inputGroupFile01">Choisir un  fichier</label>
                                     </div>
@@ -306,7 +330,7 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" value="Data Analytics & web marketing">
                                                 </label>
                                                 <span class="font-montserrart">Data Analytics & web marketing</span>
                                             </div>
@@ -315,7 +339,7 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" value="Référencement & SEO">
                                                 </label>
                                                 <span class="font-montserrart">Référencement & SEO</span>
                                             </div>
@@ -324,7 +348,7 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" value="Politique de gestion financière">
                                                 </label>
                                                 <span class="font-montserrart">Politique de gestion financière</span>
                                             </div>
@@ -333,7 +357,7 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" value="Expertise et audit technique">
                                                 </label>
                                                 <span class="font-montserrart">Expertise et audit technique</span>
                                             </div>
@@ -342,7 +366,8 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]"
+                                                        value="Étude éclairage extérieur, intérieur et architectural">
                                                 </label>
                                                 <span class="font-montserrart">
                                                     Étude éclairage extérieur, intérieur et architectural
@@ -358,7 +383,8 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]"
+                                                        value="Assistance à maîtrise d’ouvrage ou maîtrise d’œuvre">
                                                 </label>
                                                 <span class="font-montserrart">Assistance à maîtrise d’ouvrage
                                                     ou maîtrise d’œuvre</span>
@@ -368,7 +394,8 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" 
+                                                        value="Étude statique et dynamique des réseaux Haute Tension">
                                                 </label>
                                                 <span class="font-montserrart">Étude statique et dynamique des
                                                     réseaux Haute Tension</span>
@@ -378,7 +405,9 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" 
+                                                        value="Plan de protection et note de calculs des
+                                                         réseaux Haute Tension et Basse Tension">
                                                 </label>
                                                 <span class="font-montserrart">
                                                     Plan de protection et note de calculs des réseaux
@@ -390,7 +419,8 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]"
+                                                        value="Rétrofit des équipements électriques Haute et Basse Tension">
                                                 </label>
                                                 <span class="font-montserrart">
                                                     Rétrofit des équipements électriques Haute et Basse Tension
@@ -401,7 +431,8 @@
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    <input type="checkbox" name="besoins[]" 
+                                                        value="Étude d’exécution des installations électriques">
                                                 </label>
                                                 <span class="font-montserrart">
                                                     Étude d’exécution des installations électriques
@@ -473,7 +504,7 @@
                     </form>
                 </div>
 
-                <div class="tab-pane" id="captain">
+                <div class="tab-pane active" id="send-simple-mail">
                     <form action="{{route('sendSimpleMail')}}" method="POST" enctype="multipart/form-data"  
                         id="form-autre">
 
@@ -487,13 +518,23 @@
 
                                     <div class="form-group label-floating col-md-6">
                                         <label class="control-label">Nom et prénoms</label>
-                                        <input name="name" type="text" class="form-control col-md-12">
+                                        <input name="name-simple" type="text" class="form-control col-md-12" required=true>
+
+                                        @if ($errors->has('name-simple')) 
+                                            <span class="bmd-help text-muted text-danger float-left">
+                                            {{ $errors->first('name-simple') }}</span> 
+                                        @endif
                                     </div>
 
 
                                     <div class="form-group label-floating col-md-6">
                                         <label class="control-label">Adresse email</label>
-                                        <input name="email" type="email" class="form-control col-md-12">
+                                        <input name="mail-simple" type="email" class="form-control col-md-12" required=true>
+
+                                        @if ($errors->has('mail-simple')) 
+                                            <span class="bmd-help text-muted text-danger float-left">
+                                            {{ $errors->first('mail-simple') }}</span> 
+                                        @endif
                                     </div>
 
                                 </div>
@@ -503,7 +544,12 @@
 
                                 <div class="form-group label-floating col-md-12">
                                     <label class="control-label">Message</label>
-                                    <textarea class="form-control" name="message" placeholder="" rows="5"></textarea>
+                                    <textarea class="form-control" required=true name="message-simple" placeholder="" rows="5"></textarea>
+                                
+                                    @if ($errors->has('mesage-simple')) 
+                                        <span class="bmd-help text-muted text-danger float-left">
+                                        {{ $errors->first('message-simple') }}</span> 
+                                    @endif
                                 </div>
 
                                 <div class="input-group col-md-12 pt-5">
