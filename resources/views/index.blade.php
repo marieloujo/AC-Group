@@ -26,20 +26,21 @@
     @endsection
 
     <!--Section: Présentation-->
-    <div class="container-fluid mb-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s"  id="presentation" >
+    <div class="container-fluid mb-5 animate" data-animate="zoomIn"
+        data-duration="1.0s" data-delay="0.1s"  id="presentation" >
 
         <!--Section: Content-->
         <section class="dark-grey-text">
     
             <div class="row pr-lg-5">
                 
-                <div class="col-md-7 animated " id="presentation-illustration">
+                <div class="col-md-5 animated " id="presentation-illustration">
                     <div class="">
-                        <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                        <img src="{{asset('images/logo/ac-group.jpg')}}" class="img-fluid" alt="smaple image">
                     </div>
                 </div>
 
-                <div class="col-md-5 d-flex align-items-center" id="presentation-texte">
+                <div class="col-md-7 d-flex align-items-center" id="presentation-texte">
                     <div>
                         
                         <h3 class="font-weight-bold mb-4">{{ trans('sentences.pages.accueil.presentation.title')}}</h3>
@@ -77,12 +78,28 @@
 
         <section class="p-md-3 mx-md-5 mb-4" id="expertises-communication">
 
-            <div class="container text-center pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                <h5 class="font-weight-bold mb-2">{{ trans('sentences.pages.accueil.expertises.poles.1.title')}}</h5>
-    
-                <p class="text-muted text-center pt-2">
-                    {{ trans('sentences.pages.accueil.expertises.poles.1.description')}}</p>
+            <div class="container  pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
+                <h5 class="font-weight-bold mb-2 text-center">{{ trans('sentences.pages.accueil.expertises.poles.1.title')}}</h5>
+                <hr class="w-header my-4">
+
+                <div class="row d-flex justify-content-between align-items-center" >
+                    <div class="col-md-8 mb-4">
+                        <p class="text-muted pt-3">
+                            {{ trans('sentences.pages.accueil.expertises.poles.1.description')}}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
+                        <img src="{{asset('images/logo/AC-Communication.jpg')}}" class="img-fluid" style="height: 200px;" alt="">
+                    </div>
+                </div>
+
             </div>
+
+
 
             <div class="row pt-5 pb-5">
                 <div class="col-lg-10 mx-auto">
@@ -214,12 +231,27 @@
 
         <section class="p-md-3 mx-md-5 mt-5" id="expertises-services">
 
-            <div class="container text-center pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                <h5 class="font-weight-bold mb-2">{{ trans('sentences.pages.accueil.expertises.poles.2.title')}}</h5>
+            <div class="container  pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
+                <h5 class="font-weight-bold text-center mb-2">
+                    {{ trans('sentences.pages.accueil.expertises.poles.2.title')}}</h5>
+
+                <hr class="w-header my-4">
+
+                <div class="row d-flex justify-content-between align-items-center" >
+                    <div class="col-md-8 mb-4">
+                        <p class="text-muted pt-3">
+                            {{ trans('sentences.pages.accueil.expertises.poles.2.description')}}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
+                        <img src="{{asset('images/logo/AC-Service.jpg')}}" class="img-fluid" style="height: 200px;" alt="">
+                    </div>
+                </div>
     
-                <p class="text-muted text-center pt-2">
-                    {{ trans('sentences.pages.accueil.expertises.poles.2.description')}}
-                </p>
             </div>
 
             <div class="row pt-5 pb-5">

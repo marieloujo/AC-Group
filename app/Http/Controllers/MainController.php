@@ -13,9 +13,6 @@ class MainController extends Controller
 
     public function accueil(Request $request)
     {
-
-        //dump(App::getLocale()).die();
-
         return view('index', array(
             'namePage'=>'accueil',
             'locale' => App::getLocale(),

@@ -1,0 +1,216 @@
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+  
+/*---------------- Apply font ------------------*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+
+.font-montserrart {
+  font-family: 'Montserrat', sans-serif;
+}
+  
+/*---------------- End Apply font ------------------*/
+
+
+
+
+
+/*---------------- Header section ------------------*/
+
+
+.top-nav-collapse {
+    background-color: #0056b8 !important;
+  }
+  
+
+  
+
+.navbar {
+
+background-image: linear-gradient(to right, #0055b0, #0055b0ce );
+
+}
+
+
+.active-nav {
+
+background-color: #3f51b5;
+
+}
+
+
+@media (min-width: 992px) {
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0;
+}
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0;
+}
+}
+
+
+
+#banner {
+    background: linear-gradient(45deg, rgba(0, 85, 176, 0.6) , #0d47a1 100%);
+    color: #ffffff;
+    padding-top: 5%;
+}
+
+
+.bottom-img{
+    width: 100%;
+}
+
+/*---------------- End header ------------------*/
+
+
+
+
+
+/*---------------- Timeline section expertises ------------------*/
+
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    margin-left: -1px;
+    background-color: #50a1ff;
+  }
+  
+  
+  @media (max-width: 767.98px) {
+    .timeline::before {
+      left: 8px;
+    }
+  
+  }
+  
+  @media (max-width: 767.98px) {
+    .timeline-element {
+      width: 100%;
+      text-align: left;
+      padding-left: 2.5rem;
+      padding-right: 0;
+    }
+  }
+  
+  /*----------------  End Timeline ------------------*/
+  
+  
+  
+  /*----------------  Sections nos réalisations ------------------*/
+  
+  .gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; 
+  }
+    .gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; 
+  }
+    .gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); 
+  }
+  
+  @media (max-width: 450px) {
+    .gallery {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      -webkit-column-width: 100%;
+      -moz-column-width: 100%;
+      column-width: 100%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .btn.filter {
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
+    }
+  }
+  button.close {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    padding-right: 1rem;
+    padding-top: .6rem;
+  }
+  
+  /*----------------  End Section ------------------*/
+  
+  
+  
+  
+  
+  
+  
+  /*---------------- Autres ------------------*/
+  
+  .barre {
+      height: 0.2em;
+      width: 15em;
+      background-color: #ef6c00;
+  }
+  
+  .card-header {
+    background-color: #fff;
+  }
+  
+  
+  .error{
+    color: red !important;
+  }
+  
+  /*---------------- End ------------------*/
+  
+  
+  
+  
