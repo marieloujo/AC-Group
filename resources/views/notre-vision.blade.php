@@ -41,7 +41,7 @@
 
                 <div class="col-md-4 animated " id="presentation-illustration">
                     <div class="">
-                        <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                        <img src="{{asset('images/logo/ac-group.jpg')}}" class="img-fluid" alt="smaple image">
                     </div>
                 </div>
 

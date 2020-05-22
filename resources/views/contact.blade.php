@@ -53,9 +53,9 @@
     
 
     <div class="row col-md-12 pt-5 d-flex align-items-center">
-        <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="0.1s">
+        <div class="col-md-4 text-center animate-web-only" data-animate="fadeInUp" data-duration=".7s" data-delay="0.1s">
             <a class="btn-link" href="https://wa.me/+0123456789">
-                <button class="btn btn-orange btn-fab  btn-round">
+                <button class="btn btn-indigo  btn-fab  btn-round">
                     <i class="fab fa-whatsapp text-white"></i>
                 </button>
 
@@ -63,18 +63,18 @@
             </a>
 
         </div>
-        <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="0.5s">
+        <div class="col-md-4 text-center animate-web-only" data-animate="fadeInUp" data-duration=".7s" data-delay="0.5s">
             <a class="btn-link" href="tel:+ 01 234 567 89">
-                <button class="btn btn-orange btn-fab  btn-round">
+                <button class="btn btn-indigo btn-fab  btn-round">
                     <i class="fas fa-phone text-white"></i>
                 </button>
 
                 <p class="mt-3">{{ trans('sentences.pages.contact.contact.tel')}}</p>
             </a>
         </div>
-        <div class="col-md-4 text-center animate" data-animate="fadeInUp" data-duration=".7s" data-delay="1.0s">
+        <div class="col-md-4 text-center animate-web-only" data-animate="fadeInUp" data-duration=".7s" data-delay="1.0s">
             <a class="btn-link" href="mailto:contact.ac-group.com">
-                <button class="btn btn-orange btn-fab  btn-round">
+                <button class="btn btn-indigo btn-fab  btn-round">
                     <i class="fas fa-envelope text-white"></i>
                 </button>
                 <p class="mt-3">{{ trans('sentences.pages.contact.contact.email')}}</p>

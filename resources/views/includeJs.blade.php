@@ -23,9 +23,15 @@
 <script type="text/javascript">
     $(document).ready(function(){
 
+        $('.animate-web-only').scrolla({
+            mobile: false
+        });
+
         $('.animate').scrolla({
             mobile: true
         });
+
+        
         
 
     });
