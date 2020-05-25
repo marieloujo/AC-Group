@@ -142,9 +142,6 @@
     </div>
     <!--Section: FAQ-->
 
-    <form class="multi-range-field my-5 pb-5">
-        <input id="multi" class="multi-range" type="range" />
-      </form>
     
 
 @endsection

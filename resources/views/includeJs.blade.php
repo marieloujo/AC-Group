@@ -12,8 +12,8 @@
 <script type="text/javascript" src="{{asset('mdb/js/multi-range.js')}}"></script>
 
 
-    <!-- Forms Validations Plugin -->
-    <script src="{{asset('create-tim/js/plugins/jquery.validate.min.js')}}"></script>
+<!-- Forms Validations Plugin -->
+<script src="{{asset('bootstrap-wizard/js/jquery.validate.min.js')}}"></script>
 
 
 @yield('other-js')

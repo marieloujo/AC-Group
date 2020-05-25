@@ -8,7 +8,7 @@
 
 @section('other-css')
 
-	<link href="{{asset('bootstrap-wizard/css/material-bootstrap-wizard.css')}}" rel="stylesheet" />
+    <link href="{{asset('bootstrap-wizard/css/material-bootstrap-wizard.css')}}" rel="stylesheet" />
     
 @endsection
 
@@ -23,7 +23,7 @@
 
         <div class="row pr-lg-5 pt-5">
             
-            <div class="col-md-8 d-flex n-items-aligcenter" id="presentation-texte">
+            <div class="col-md-8 d-flex align-items-center" id="presentation-texte">
                 <div>
                     <h2 class="info-text text-center font-weight-bold">
                         {{ trans('sentences.pages.contact.presentation.titre')}}</h2>
