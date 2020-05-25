@@ -23,7 +23,7 @@
 
         <div class="row pr-lg-5 pt-5">
             
-            <div class="col-md-8 d-flex align-items-center" id="presentation-texte">
+            <div class="col-md-8 d-flex n-items-aligcenter" id="presentation-texte">
                 <div>
                     <h2 class="info-text text-center font-weight-bold">
                         {{ trans('sentences.pages.contact.presentation.titre')}}</h2>
@@ -157,7 +157,8 @@
 
                                 <div class="form-group label-floating col-md-12">
                                     <label class="control-label">
-                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.1.label')}}</label>
+                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.1.label')}}
+                                    </label>
                                     <textarea name="message" class="form-control" placeholder="" rows="5"></textarea>
 
                                     @if ($errors->has('message')) 
@@ -167,15 +168,63 @@
 
                                 </div>
 
-                                <div class="input-group col-md-12 pt-5">
-                                    <div class="custom-file">
-                                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
-                                        aria-describedby="inputGroupFileAddon01">
-                                    <label class="custom-file-label" for="inputGroupFile01">
-                                        {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.2.label')}}</label>
-                                    </div>
-                                </div>
 
+                                <div class="my-5 container-fluid pb-3">
+
+                                    <h5 class="font-weight-bold text-capitalize">
+                                        Votre budget (€)
+                                    </h5>
+
+                                    <div class="row">
+                                        <div class="col-md-1 mr-5">
+                                            <input type="number" class="input text-center" id="min" value="2000">
+                                        </div>
+                                        <div class="col-md-8 mt-2 multi-range-field ">
+                                            <input id="budjet" class="multi-range range" name="budget"  type="range" />
+                                        </div>
+                                        <div class="col-md-1 ml-3">
+                                            <input type="number" class="input text-center" id="max" value="20000">
+                                        </div>
+                                    </div>
+
+                                    <div class="checkbox col-sm-12 mt-5">
+                                        <label> 
+                                            <input type="checkbox" id="undefined" name="undefined"
+                                                value="Budjet indéterminé">
+                                            <span class="font-montserrart text-muted">
+                                                Indéterminé
+                                            </span> 
+                                        </label>
+                                    </div>
+
+                                </div>   
+
+
+                                <div class="multi-range-field my-5 col-md-12 pb-5">
+                                    <h5 class="font-weight-bold text-capitalize">
+                                        Votre deadline (mois)
+                                    </h5>
+
+                                    <div class="row">
+                                        <div class="col-md-10 mt-2 multi-range-field ">
+                                            <input id="delai" class="multi-range delai" name="delai"  type="range" />
+                                        </div>
+                                        <div class="col-md-1 ml-3">
+                                            <input type="number" class="input text-center" id="mois" value="12">
+                                        </div>
+                                    </div>
+
+                                    <div class="checkbox col-sm-12 mt-3">
+                                        <label> 
+                                            <input type="checkbox" id="undefined-date" name="undefined-date"
+                                                value="Durée indéterminé">
+                                            <span class="font-montserrart text-muted">
+                                                Indéterminé
+                                            </span> 
+                                        </label>
+                                    </div>
+
+                                </div>   
 
                             </div>
 
@@ -183,17 +232,19 @@
                                 <h5 class="info-text font-weight-bold">
                                     {{ trans('sentences.pages.contact.formulaire.form-1.sections.3.titre')}}</h5>
 
-                                <div class="row">
+                                <div class="row pb-5">
 
                                     <div class="col-md-6">
 
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="besoins[]" value="Data Analytics & web marketing">
+                                                    <input type="checkbox" name="besoins[]" 
+                                                        value="Data Analytics & web marketing">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}</span>
                                             </div>
                                         </div>
 
@@ -201,9 +252,10 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" value="Référencement & SEO">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}</span>
                                             </div>
                                         </div>
 
@@ -211,19 +263,22 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" value="Politique de gestion financière">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}</span>
                                             </div>
                                         </div>
 
                                         <div class="col-sm-12 pb-5">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="besoins[]" value="Expertise et audit technique">
+                                                    <input type="checkbox" name="besoins[]" 
+                                                        value="Expertise et audit technique">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}</span>
                                             </div>
                                         </div>
 
@@ -232,15 +287,14 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]"
                                                         value="Étude éclairage extérieur, intérieur et architectural">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
-                                                </span>
                                             </div>
                                         </div>
 
                                     </div>
-
 
                                     <div class="col-md-6">
 
@@ -249,9 +303,10 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]"
                                                         value="Assistance à maîtrise d’ouvrage ou maîtrise d’œuvre">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}</span>
                                             </div>
                                         </div>
 
@@ -260,9 +315,9 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" 
                                                         value="Étude statique et dynamique des réseaux Haute Tension">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.4.title')}}</span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.4.title')}}</span>
                                             </div>
                                         </div>
 
@@ -272,10 +327,10 @@
                                                     <input type="checkbox" name="besoins[]" 
                                                         value="Plan de protection et note de calculs des
                                                          réseaux Haute Tension et Basse Tension">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.5.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.5.title')}}
-                                                </span>
                                             </div>
                                         </div>
 
@@ -284,10 +339,10 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]"
                                                         value="Rétrofit des équipements électriques Haute et Basse Tension">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.6.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.6.title')}}
-                                                </span>
                                             </div>
                                         </div>
 
@@ -296,10 +351,10 @@
                                                 <label>
                                                     <input type="checkbox" name="besoins[]" 
                                                         value="Étude d’exécution des installations électriques">
+                                                    <span class="font-montserrart dark-grey-text">
+                                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.7.title')}}
+                                                    </span>
                                                 </label>
-                                                <span class="font-montserrart">
-                                                    {{ trans('sentences.pages.accueil.expertises.poles.2.list.7.title')}}
-                                                </span>
                                             </div>
                                         </div>
 
@@ -307,11 +362,21 @@
 
                                 </div>
 
+
+                                <div class="input-group col-md-12 mt-5">
+                                    <div class="custom-file mt-5">
+                                        <input type="file" name="file" class="custom-file-input mt-5" 
+                                            id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">
+                                            {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.inputs.2.label')}}</label>
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
 
-                        <button type='submit' class='btn btn-orange float-right btn-wd font-weight-bold' 
+                        <button type='submit' class='btn btn-indigo float-right btn-wd font-weight-bold' 
                             name='envoyer'>{{ trans('sentences.pages.contact.formulaire.button')}}</button>
 
                     </form>
@@ -357,7 +422,8 @@
                                 </div>
 
                                 <h5 class="info-text col-md-12 font-weight-bold pt-5">
-                                    {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.titre')}}</h5>
+                                    {{ trans('sentences.pages.contact.formulaire.form-1.sections.2.titre')}}
+                                </h5>
 
 
                                 <div class="form-group label-floating col-md-12">
@@ -371,6 +437,7 @@
                                         {{ $errors->first('message-simple') }}</span> 
                                     @endif
                                 </div>
+
 
                                 <div class="input-group col-md-12 pt-5">
                                     <div class="custom-file">
@@ -386,7 +453,7 @@
 
                         </div>
 
-                        <button type='submit' class='btn btn-orange float-right btn-wd font-weight-bold'
+                        <button type='submit' class='btn btn-indigo float-right btn-wd font-weight-bold'
                             name='envoyer'>{{ trans('sentences.pages.contact.formulaire.button')}}</button>
 
                     </form>

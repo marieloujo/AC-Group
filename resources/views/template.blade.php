@@ -30,7 +30,7 @@
 <section id="nav-bar">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="topSection">
     
     <div class="container">
   
@@ -123,7 +123,8 @@
       </div>
 
 
-    <img src="{{asset('images/ARC.png')}}" alt="" class="bottom-img"> 
+    <div  class="bottom-img"> </div>
+
 
 
 </section>
@@ -144,6 +145,12 @@
 
 
 
+<div id="btnTop" class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;display: none;">
+  <a href="#topSection" class="btn-floating btn-large indigo">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+</div>
+
 
 
 <!--Footer-->
@@ -153,7 +160,7 @@
 
         <div class="pt-5">
             <p class="h4 mb-4">{{ trans('sentences.footer.titre')}}</p>
-            <a class="btn btn-outline-white animated zoomIn infinite"
+            <a class="btn btn-sm btn-outline-white animated  heartBeat infinite"
               href="{{url('/contact')}}" target="_blank" role="button"> {{ trans('sentences.footer.button')}}
             </a>
         </div>

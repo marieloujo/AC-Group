@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="{{asset('mdb/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('mdb/css/mdb.min.css')}}">
+<link rel="stylesheet" href="{{asset('mdb/css/timeline.css')}}">
 
 
 
@@ -15,6 +16,8 @@
 
 
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+<link rel="stylesheet" href="{{asset('mdb/css/multi-range.css')}}">
 
 {{--
 <link rel="stylesheet" href="{{asset('mdb/css/style.css')}}">--}}

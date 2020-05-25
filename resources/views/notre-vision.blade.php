@@ -97,7 +97,7 @@
       
             </div>
       
-            <div class="col-lg-3 col-md-4 mb-0 animate" data-animate="rotateInUpLeft" data-duration="1.0s" data-delay="0.1s">
+            <div class="col-lg-3 col-md-4 mb-4 animate" data-animate="rotateInUpLeft" data-duration="1.0s" data-delay="0.1s">
       
               <div class="card hoverable">
       
@@ -117,7 +117,7 @@
       
             </div>
 
-            <div class="col-lg-3 col-md-4 mb-0 animate" data-animate="rotateInUpRight" data-duration="1.0s" data-delay="0.1s">
+            <div class="col-lg-3 col-md-4 mb-4 animate" data-animate="rotateInUpRight" data-duration="1.0s" data-delay="0.1s">
       
                 <div class="card hoverable">
         

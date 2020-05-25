@@ -27,7 +27,7 @@ Route::post('/send-mail', 'ContactController@sendSimpleMail')->name('sendSimpleM
 Route::post('/sendmail', 'ContactController@sendMail')->name('sendMail');
 
 
-
+/*
 Route::group(['middleware' => 'auth'], function() {
 
     Route::group(['middleware' => 'isAdmin'], function() {
@@ -71,7 +71,7 @@ Route::group(['middleware' => 'auth'], function() {
     });
 
 });
-
+*/
 
 
 Route::get('lang/{locale}', 'MainController@lang');

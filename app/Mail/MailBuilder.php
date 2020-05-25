@@ -17,6 +17,8 @@ class MailBuilder extends Mailable
     public $societe;
     public $message;
     public $besoins;
+    public $budget;
+    public $delai;
 
         /**
      * Create a new message instance.
@@ -25,7 +27,7 @@ class MailBuilder extends Mailable
      */
 
 
-    public function __construct($name, $email, $message, $societe, $file, $besoins)
+    public function __construct($name, $email, $message, $societe, $file, $besoins, $budget, $delai)
     {
         $this->name = $name;
         $this->email = $email;
@@ -33,6 +35,8 @@ class MailBuilder extends Mailable
         $this->societe = $societe;
         $this->file = $file;
         $this->besoins = $besoins;
+        $this->delai = $delai;
+        $this->budget = $budget;
     }
 
 
@@ -60,6 +64,8 @@ class MailBuilder extends Mailable
             ['name'=>$this->message,
             'societe' => $this->societe,
             'besoins' => $this->besoins,
+            'budget' => $this->budget,
+            'delai' => $this->delai,
             'contenu'=>$this->message]); 
 
     

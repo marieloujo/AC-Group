@@ -24,7 +24,6 @@ class ContactController extends Controller
 
         $inputs = $request->input();
 
-
         $validator = Validator::make($inputs,  ContactForm::$simpleRules);
 
         if ($validator->fails()) {
@@ -59,6 +58,7 @@ class ContactController extends Controller
     public function sendMail(Request $request) {
 
         $inputs = $request->input();
+        //dump($inputs).die();
 
 
         $validator = Validator::make($inputs,  ContactForm::$rules);
@@ -68,7 +68,8 @@ class ContactController extends Controller
         }else {
 
             $fileName = null;
-
+            $budget = null;
+            $delai = null;
 
             if($request->file('file') != null) {
 
@@ -77,6 +78,18 @@ class ContactController extends Controller
 
                 $fileName =  public_path().'/documents/'.$file->getClientOriginalName();
             }
+
+            if($request->input('undefined') != null) {
+                $budget = $request->input('undefined');
+            } else{
+                $budget = $request->input('budget');
+            }
+
+            if($request->input('undefined-date') != null) {
+                $delai = $request->input('undefined-date');
+            } else{
+                $delai = $request->input('delai');
+            }
         
             $mailable = new MailBuilder(
                 $request->input('name'),
@@ -84,7 +97,9 @@ class ContactController extends Controller
                 $request->input('message'),
                 $request->input('societe'),
                 $fileName,
-                $request->input('besoins')
+                $request->input('besoins'),
+                $budget,
+                $delai
             );
             Mail::to(env("CONTACT_EMAIL"))->send($mailable);
 

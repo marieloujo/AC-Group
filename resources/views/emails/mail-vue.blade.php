@@ -21,24 +21,26 @@
 
           <div class="col-12">
               <div class="card">
-                  <div class="card-header">
-                      Corps du message
-                  </div>
-                  <div class="card-body dff justify-content-center">
+                  <div class="card-body">
 
-                      <a class="navbar-brand text-center" href='{{url('')}}'>
-                          <img id="img-color-logo" src="{{asset('images/expertises/58.jpg')}}" 
-                          alt="Logo Creative Agency" width="150px">
-                      </a><br>
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand text-center" href='{{url('')}}'>
+                            <img id="img-color-logo" src="{{asset('images/logo/ac-group.jpg')}}" 
+                            alt="Logo AC GROUP" width="180px">
+                        </a><br>
+                    </div>
 
                       <b><u>Nom et prénom</u> :</b> {{$name}} <br><br>
                       <b><u>Société</u> :</b> {{$societe}} <br><br>
-                      <b><u>Beoins</u> :
+                      <b><u>Beoins</u> :</b>
                         <ul>
                           @foreach ($besoins as $besoin)
                               <li>{{$besoin}}</li>
                           @endforeach
                         </ul>
+                      <b><u>Budget</u> :</b> {{$budget}} <br><br>
+                      <b><u>Délai</u> :</b> {{$delai}} <br><br>
+
 
                       {{$contenu}}
                   </div>

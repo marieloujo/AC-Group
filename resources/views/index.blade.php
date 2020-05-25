@@ -79,7 +79,9 @@
         <section class="p-md-3 mx-md-5 mb-4" id="expertises-communication">
 
             <div class="container  pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                <h5 class="font-weight-bold mb-2 text-center">{{ trans('sentences.pages.accueil.expertises.poles.1.title')}}</h5>
+                <h5 class="font-weight-bold mb-2 text-center">
+                    {{ trans('sentences.pages.accueil.expertises.poles.1.title')}}
+                </h5>
                 <hr class="w-header my-4">
 
                 <div class="row d-flex justify-content-between align-items-center" >
@@ -100,123 +102,254 @@
             </div>
 
 
+            <!-- Timeline -->
+            <div class="row" id="timeline">
+                <div class="col-md-12">
+                    <div class="timeline-main">
+                        <!-- Timeline Wrapper -->
+                        <ul class="stepper stepper-vertical timeline colorful-timeline pl-0">
+                    
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-check"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
 
-            <div class="row pt-5 pb-5">
-                <div class="col-lg-10 mx-auto">
-        
-                    <ol class="timeline">
+                                <div class="row container-fluid mb-5">
+                                    <div class="step-content ml-1 z-depth-1 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                        data-duration="1.0s" data-delay="0.1s">
 
-                        <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center">
+                                        <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}
+                                        </h4>
 
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" 
-                                    data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2 ">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.description')}}
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#first-section">
-                                                {{ trans('sentences.pages.accueil.expertises.button')}}
-                                                <i class="fas fa-plus-circle"></i>
-                                            </a> 
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay">
-                                        <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
-                                         class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="#">
-                                        </a>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-            
-                        <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center justify-content-end">
-                            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="{{asset('images/illustrations/seo.svg')}}" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="#">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInRight" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.description')}}
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">
-                                                {{ trans('sentences.pages.accueil.expertises.button')}}
-                                                <i class="fas fa-plus-circle"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-            
-                        <li class="timeline-element">
-                            <div class="row d-flex mb-5 align-items-center">
-                        
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}
-                                            </h5>
-                                        </div>
                                         <div class="card-body ">
-                                            <p class="card-text text-justify">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.description')}}
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">
+                                            <h6 class="card-text font-montserrart text-justify">
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.description')}}
+                                            </h6>
+
+                                            <button type="button" href="/expertises#first-section" 
+                                                class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
                                                 {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
-                                            </a>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-1"></div>
+
+                                    <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
+                                        <div class="row">
+                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
+                                            <div class="col-md-6"></div>
                                         </div>
                                     </div>
                                 </div>
-            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay">
-                                        <img src="{{asset('images/illustrations/gestion_financiere.svg')}}" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="/expertises#first-section">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
+
+                            </li>
+
+
+                            <li class="timeline-inverted">
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+
+                                <div class="row container-fluid mb-5">
+
+                                    <div class="img-content mt-2 col-md-5 d-flex align-items-center">
+                                        <div class="row">
+                                            <div class="col-md-6"></div>
+                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-1"></div>
+
+                                    <div class="step-content timeline-rigth z-depth-1 p-0 mt-2 animate" data-animate="slideInRight" 
+                                        data-duration="1.0s" data-delay="0.1s">
+
+                                        <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}
+                                        </h4>
+
+                                        <div class="card-body ">
+                                            <h6 class="card-text text-justify">
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.description')}}
+                                            </h6>
+
+                                            <button type="button" href="/expertises#first-section" 
+                                                class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
+                                                <i class="fas fa-plus-circle"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+
+                                <div class="row container-fluid mb-5">
+                                    <div class="step-content ml-1 z-depth-1 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                        data-duration="1.0s" data-delay="0.1s">
+
+                                        <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}
+                                        </h4>
+
+                                        <div class="card-body ">
+                                            <h6 class="card-text text-justify">
+                                                {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.description')}}
+                                            </h6>
+
+                                            <button type="button" href="/expertises#first-section" 
+                                                class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                                {{ trans('sentences.pages.accueil.expertises.button')}}
+                                                <i class="fas fa-plus-circle"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-1"></div>
+
+                                    <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
+                                        <div class="row">
+                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
+                                            <div class="col-md-6"></div>
+                                        </div>
                                     </div>
                                 </div>
-            
-                            </div>
-                        </li>
 
-                        
-                    </ol>
-        
+                            </li>
+
+                        </ul>
+                        <!-- Timeline Wrapper -->
+                    </div>
                 </div>
             </div>
+            <!-- Timeline -->
+
+
+            <!-- Timeline -->
+            <div class="row" id="timeline-mobile">
+                <div class="col-md-12">
+                    <div class="timeline-main">
+                        <!-- Timeline Wrapper -->
+                        <ul class="stepper stepper-vertical timeline colorful-timeline pl-0">
+                
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-check"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+                                <div class="step-content z-depth-1 ml-2 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                    data-duration="1.0s" data-delay="0.1s">
+                                    <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                        {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}
+                                    </h4>
+
+                                    <div class="card-body ">
+                                        <h6 class="card-text font-montserrart text-justify">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.description')}}
+                                        </h6>
+
+                                        <button type="button" href="/expertises#first-section" 
+                                            class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                            {{ trans('sentences.pages.accueil.expertises.button')}}
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+                                <div class="step-content z-depth-1 mr-xl-2 p-0 mt-2 animate" data-animate="slideInRight" 
+                                    data-duration="1.0s" data-delay="0.1s">
+                                    <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                        {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}
+                                    </h4>
+
+                                    <div class="card-body ">
+                                        <h6 class="card-text text-justify">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.description')}}
+                                        </h6>
+
+                                        <button type="button" href="/expertises#first-section" 
+                                            class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                            {{ trans('sentences.pages.accueil.expertises.button')}}
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+                                <div class="step-content z-depth-1 ml-2 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                    data-duration="1.0s" data-delay="0.1s">
+                                    <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                        {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}
+                                    </h4>
+
+                                    <div class="card-body ">
+                                        <h6 class="card-text text-justify">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.description')}}
+                                        </h6>
+
+                                        <button type="button" href="/expertises#first-section" 
+                                            class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                            {{ trans('sentences.pages.accueil.expertises.button')}}
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <!-- Timeline Wrapper -->
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline -->
+
 
             <div class="text-center pb-5">
                 <a href="{{url('/expertises#ac-communication')}}">
@@ -254,128 +387,269 @@
     
             </div>
 
-            <div class="row pt-5 pb-5">
-                <div class="col-lg-10 mx-auto">
-        
-                    <ol class="timeline">
+            <!-- Timeline -->
+            <div class="row" id="timeline">
+                <div class="col-md-12">
+                    <div class="timeline-main">
+                        <!-- Timeline Wrapper -->
+                        <ul class="stepper stepper-vertical timeline colorful-timeline pl-0">
+                    
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-check"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
 
-                        <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center">
+                                <div class="row container-fluid mb-5">
+                                    <div class="step-content ml-1 z-depth-1 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                        data-duration="1.0s" data-delay="0.1s">
 
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2 ">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#first-section">
+                                        <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}
+                                        </h4>
+
+                                        <div class="card-body ">
+                                            <h6 class="card-text font-montserrart text-justify">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat.
+                                            </h6>
+
+                                            <button type="button" href="/expertises#first-section" 
+                                                class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
                                                 {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
-                                            </a> 
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-1"></div>
+
+                                    <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
+                                        <div class="row">
+                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
+                                            <div class="col-md-6"></div>
                                         </div>
                                     </div>
                                 </div>
-            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="#">
-                                        </a>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-            
-                        <li class="timeline-element">
-                            <div class="row mb-5 d-flex align-items-center justify-content-end">
-                            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="#">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInRight" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
-                                            </h5>
+
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+
+                                <div class="row container-fluid mb-5">
+
+                                    <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
+                                        <div class="row">
+                                            <div class="col-md-6"></div>
+                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
                                         </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#second-section">
+                                    </div>
+
+                                    <div class="col-md-1"></div>
+
+                                    <div class="step-content z-depth-1 p-0 mt-2 animate" data-animate="slideInRight" 
+                                        data-duration="1.0s" data-delay="0.1s">
+
+                                        <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
+                                        </h4>
+
+                                        <div class="card-body ">
+                                            <h6 class="card-text text-justify">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat.
+                                            </h6>
+
+                                            <button type="button" href="/expertises#first-section" 
+                                                class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
                                                 {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
-                                            </a>
+                                            </button>
                                         </div>
+
                                     </div>
+
                                 </div>
-            
-                            </div>
-                        </li>
-            
-                        <li class="timeline-element">
-                            <div class="row d-flex mb-5 align-items-center">
-                        
-                                <div class="col-lg-6 col-md-6 animate" data-animate="slideInLeft" data-duration="1.0s" data-delay="0.1s">
-                                    <div class="card">
-                                        <div class="card-header white">
-                                            <h5 class="font-weight-bold mb-0 py-2">
-                                                {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}
-                                            </h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text text-justify">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            <a class="blue-text font-weight-bold" href="/expertises#thrid-section">
+
+                            </li>
+
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+
+                                <div class="row container-fluid mb-5">
+                                    <div class="step-content  z-depth-1 p-0 ml-1 mt-2 animate" data-animate="slideInLeft" 
+                                        data-duration="1.0s" data-delay="0.1s">
+
+                                        <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                            {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}
+                                        </h4>
+
+                                        <div class="card-body ">
+                                            <h6 class="card-text text-justify">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat.
+                                            </h6>
+
+                                            <button type="button" href="/expertises#first-section" 
+                                                class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
                                                 {{ trans('sentences.pages.accueil.expertises.button')}}
                                                 <i class="fas fa-plus-circle"></i>
-                                            </a>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-1"></div>
+
+                                    <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
+                                        <div class="row">
+                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
+                                            <div class="col-md-6"></div>
                                         </div>
                                     </div>
                                 </div>
-            
-                                <div class="col-md-6 col-lg-4 animate">
-                                    <div class="overlay rounded z-depth-1">
-                                        <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid"
-                                        alt="Sample project image" />
-                                        <a href="/expertises#first-section">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </li>
-            
-                    </ol>
-        
+
+                            </li>
+
+                        </ul>
+                        <!-- Timeline Wrapper -->
+                    </div>
                 </div>
             </div>
+            <!-- Timeline -->
+
+            <!-- Timeline -->
+            <div class="row" id="timeline-mobile">
+                <div class="col-md-12">
+                    <div class="timeline-main">
+                        <!-- Timeline Wrapper -->
+                        <ul class="stepper stepper-vertical timeline colorful-timeline pl-0">
+                
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-check"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+                                <div class="step-content z-depth-1 ml-2 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                    data-duration="1.0s" data-delay="0.1s">
+                                    <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}
+                                    </h4>
+
+                                    <div class="card-body ">
+                                        <h6 class="card-text font-montserrart text-justify">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </h6>
+
+                                        <button type="button" href="/expertises#first-section" 
+                                            class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                            {{ trans('sentences.pages.accueil.expertises.button')}}
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+                                <div class="step-content z-depth-1 mr-xl-2 p-0 mt-2 animate" data-animate="slideInRight" 
+                                    data-duration="1.0s" data-delay="0.1s">
+                                    <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}
+                                    </h4>
+
+                                    <div class="card-body ">
+                                        <h6 class="card-text text-justify">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </h6>
+
+                                        <button type="button" href="/expertises#first-section" 
+                                            class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                            {{ trans('sentences.pages.accueil.expertises.button')}}
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!--Section Title -->
+                                <a href="#!" class="a">
+                                    <span class="circle indigo darken-1 z-depth-1-half"><i class="fas fa-credit-card"
+                                        aria-hidden="true"></i></span>
+                                </a>
+                    
+                                <!-- Section Description -->
+                                <div class="step-content z-depth-1 ml-2 p-0 mt-2 animate" data-animate="slideInLeft" 
+                                    data-duration="1.0s" data-delay="0.1s">
+                                    <h4 class="font-weight-bold timeline-header indigo darken-1 white-text p-3">
+                                        {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}
+                                    </h4>
+
+                                    <div class="card-body ">
+                                        <h6 class="card-text text-justify">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </h6>
+
+                                        <button type="button" href="/expertises#first-section" 
+                                            class="btn btn-md font-weight-bold btn-outline-primary waves-effect">
+                                            {{ trans('sentences.pages.accueil.expertises.button')}}
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <!-- Timeline Wrapper -->
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline -->
 
 
             <div class="text-center pb-5">
@@ -391,76 +665,297 @@
     <!-- End Section-->
 
 
+    
+
+
 
     <!--Section: Technologies-->
     <div class="container-fluid mt-5  my-5">
 
-        
-
         <section class="p-md-3 mx-md-5">
 
             <div class="animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s">
-                <h3 class="font-weight-bold mt-5 text-center">{{ trans('sentences.pages.accueil.technologies​.titre')}}​</h3>
+                <h3 class="font-weight-bold mt-5 text-center">
+                    {{ trans('sentences.pages.accueil.technologies​.titre')}}​
+                </h3>
                 <hr class="w-header my-4">
+                <p class="text-muted text-center lead pt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top">
+                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                        class="fas fa-chevron-right"></i></a>
+                </div>
+                <!--/.Controls-->
+            
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+                    <li data-target="#multi-item-example" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+            
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+            
+                <!--First slide-->
+                <div class="carousel-item active">
+
+                    <div class="card-deck container-fluid">
+
+                        <div class="card">
                 
-                <div class="row d-flex justify-content-between align-items-center" >
-                    <div class="col-md-6 mb-4">
-                        <p class="text-muted pt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                            
+                
+                        </div>
+            
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20(3).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+                            
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                
+                        </div>
+
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                            
+                
+                        </div>
+
                     </div>
-                    <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
-                        <i class="fa fa-layer-group indigo-text fa-10x"></i>
+            
+                </div>
+                <!--/.First slide-->
+            
+                <!--Second slide-->
+                <div class="carousel-item">
+            
+                    <div class="card-deck container-fluid">
+
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                            
+                
+                        </div>
+            
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20(3).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+                            
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                
+                        </div>
+
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                            
+                
+                        </div>
+
                     </div>
+
                 </div>
+                <!--/.Second slide-->
+            
+                <!--Third slide-->
+                <div class="carousel-item">
+            
+                    <div class="card-deck container-fluid">
+
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                            
+                
+                        </div>
+            
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20(3).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+                            
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                
+                        </div>
+
+                        <div class="card">
+                
+                            <div class="view overlay">
+                                <img 
+                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    class="card-img-top" alt="">
+                                <a>
+                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <hr>
+                                <p class="card-text mb-3">
+                                    Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                </p>
+                            </div>
+                            
+                
+                        </div>
+
+                    </div>
+            
+                </div>
+                <!--/.Third slide-->
+            
+                </div>
+                <!--/.Slides-->
+            
             </div>
+            <!--/.Carousel Wrapper-->
 
-            <div class="row pt-3">
-
-                <div class="col-lg-3 col-md-6 mb-5 animate" data-animate="rubberBand" data-duration="1.0s" data-delay="0.1s">
-                    <h4 class="font-weight-bold mb-3">
-                        <!--i class="far fa-paper-plane indigo-text pr-2"></i-->
-                        <img src="{{asset('images/technologie/laravel.svg')}}"/> <span> Laravel </span>
-                    </h4>
-                    <p class="text-muted mb-lg-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-5 animate" data-animate="rubberBand" data-duration="1.0s" data-delay="0.1s">
-                    <h4 class="font-weight-bold mb-3">
-                        <img src="{{asset('images/technologie/angular.svg')}}"/> <span> Angular </span>
-                    </h4>
-                    <p class="text-muted mb-lg-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-5 animate" data-animate="rubberBand" data-duration="1.0s" data-delay="0.1s">
-                    <h4 class="font-weight-bold mb-3">
-                        <img src="{{asset('images/technologie/Vue.js.svg')}}"/> <span> Vue Js </span>
-                    </h4>
-                    <p class="text-muted mb-md-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-5 animate" data-animate="rubberBand" data-duration="1.0s" data-delay="0.1s">
-                    <h4 class="font-weight-bold mb-3">
-                        <img src="{{asset('images/technologie/Vue.js.svg')}}"/> <span> Flutter </span>
-                    </h4>
-                    <p class="text-muted mb-md-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-
-            </div>
 
         </section>
     </div>
@@ -476,21 +971,15 @@
         <hr class="w-header my-4">
 
         <div class="container-fluid my-3 px-5 pb-3">
-        
-            <!--Section: Content-->
             <section class="text-center dark-grey-text">
-        
-                <!-- Grid row -->
                 <div class="row">
-            
-                    <!-- Grid column -->
+
                     <div class="col-md-12 mb-4">
-            
+
                         <div class="wrapper-carousel-fix">
-                    
-                            <!-- Carousel Wrapper -->
-                            <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide" data-ride="carousel"
-                                data-interval="false">
+
+                            <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide" 
+                                data-ride="carousel" data-interval="false">
                             
                                 <!--Slides-->
                                 <div class="carousel-inner" role="listbox">
@@ -574,15 +1063,16 @@
                     <!-- Grid column -->
             
                 </div>
-                <!-- Grid row -->
-                
             </section>
-            <!--Section: Content-->
-        
         </div>   
         
     </div>
     <!-- End Section-->
+
+
+    
+
+
 
  
 @endsection

@@ -15,7 +15,7 @@ body {
 
 
 .font-montserrart {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important; 
 }
   
 /*---------------- End Apply font ------------------*/
@@ -48,38 +48,6 @@ background-color: #0354b0a2;
 }
 
 
-@media (min-width: 992px) {
-
-.navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.navbar-nav .nav-link {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 0;
-}
-
-}
-
-
-
-@media (min-width: 1200px) {
-
-.navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.navbar-nav .nav-link {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 0;
-}
-}
-
-
 
 #banner {
     background: linear-gradient(45deg, rgba(0, 85, 176, 0.6) , #0d47a1 100%);
@@ -89,8 +57,14 @@ background-color: #0354b0a2;
 
 
 .bottom-img{
+    background-image: url("../images/ARC.png"); 
     width: 100%;
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
+
+
+
 
 /*---------------- End header ------------------*/
 
@@ -98,7 +72,7 @@ background-color: #0354b0a2;
 
 
 
-/*---------------- Timeline section expertises ------------------*/
+/*---------------- Timeline section expertises ------------------/
 
 .timeline {
     position: relative;
@@ -138,55 +112,7 @@ background-color: #0354b0a2;
   /*----------------  End Timeline ------------------*/
   
   
-  
-  /*----------------  Sections nos réalisations ------------------*/
-  
-  .gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%; 
-  }
-    .gallery .pics {
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease; 
-  }
-    .gallery .animation {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); 
-  }
-  
-  @media (max-width: 450px) {
-    .gallery {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-      -webkit-column-width: 100%;
-      -moz-column-width: 100%;
-      column-width: 100%;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .btn.filter {
-      padding-left: 1.1rem;
-      padding-right: 1.1rem;
-    }
-  }
-  button.close {
-    position: absolute;
-    right: 0;
-    z-index: 2;
-    padding-right: 1rem;
-    padding-top: .6rem;
-  }
-  
-  /*----------------  End Section ------------------*/
-  
-  
+
   
   
   
@@ -208,9 +134,164 @@ background-color: #0354b0a2;
   .error{
     color: red !important;
   }
+
+
+  .input {
+    width: 80px;
+    height: 50px;
+    border: none !important;
+    border-radius: 3px;
+    background-color: rgba(238, 238, 236, 0.356);
+    box-shadow: 
+      0 3px 3px 0 rgba(153, 153, 153, 0.14), 
+      0 3px 2px -2px rgba(153, 153, 153, 0.2), 
+      0 2px 5px 0 rgba(153, 153, 153, 0.12);
+  }
+
+  .value, .ghost {
+    display: none;
+  }
   
   /*---------------- End ------------------*/
   
   
   
   
+
+
+ /*---------------- Media query ------------------*/
+
+@media (max-width: 5000px) {
+
+  .bottom-img{
+    height: 450px; 
+  }
+
+}
+
+
+@media (min-width: 300px) { 
+
+  .bottom-img{
+    height: 80px; 
+  }
+
+  #timeline {
+    display: none;
+  }
+
+  #timeline-mobile {
+    display: block;
+  }
+
+}
+
+
+@media (min-width: 668px) { 
+
+  .bottom-img{
+    height: 150px; 
+  }
+
+  #timeline {
+    display: none;
+  }
+
+  #timeline-mobile {
+    display: block;
+  }
+
+}
+
+
+
+@media (min-width: 765px) { 
+
+  .bottom-img{
+    height: 150px; 
+  }
+
+  #timeline {
+    display: none;
+  }
+
+  #timeline-mobile {
+    display: block;
+  }
+
+}
+
+
+@media (min-width: 992px) {
+
+  .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .navbar-nav .nav-link {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 0;
+  }
+
+  .bottom-img{
+    height: 150px; 
+  }
+
+
+
+
+}
+
+
+@media (min-width: 1135px) {
+
+  #timeline {
+    display: block;
+  }
+
+  #timeline-mobile {
+    display: none;
+  }
+  
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .navbar-nav .nav-link {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 0;
+  }
+
+  .bottom-img{
+    height: 170px; 
+  }
+
+
+  #timeline {
+    display: block;
+  }
+
+  #timeline-mobile {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+ /*---------------- End ------------------*/
