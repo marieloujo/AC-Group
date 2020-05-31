@@ -34,14 +34,14 @@ body {
 
   
 
-.navbar {
+.navbar, .page-footer {
 
 background-image: linear-gradient(to right, #0353b0, #215895 );
 
 }
 
 
-.active-nav {
+.active-nav { 
 
 background-color: #0354b0a2;
 
@@ -68,50 +68,6 @@ background-color: #0354b0a2;
 
 /*---------------- End header ------------------*/
 
-
-
-
-
-/*---------------- Timeline section expertises ------------------/
-
-.timeline {
-    position: relative;
-    list-style: none;
-    padding: 1rem 0;
-    margin: 0;
-  }
-  
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    margin-left: -1px;
-    background-color: #50a1ff;
-  }
-  
-  
-  @media (max-width: 767.98px) {
-    .timeline::before {
-      left: 8px;
-    }
-  
-  }
-  
-  @media (max-width: 767.98px) {
-    .timeline-element {
-      width: 100%;
-      text-align: left;
-      padding-left: 2.5rem;
-      padding-right: 0;
-    }
-  }
-  
-  /*----------------  End Timeline ------------------*/
-  
-  
 
   
   
@@ -150,6 +106,10 @@ background-color: #0354b0a2;
 
   .value, .ghost {
     display: none;
+  }
+
+  .card-img-top{
+    height: 200px;
   }
   
   /*---------------- End ------------------*/

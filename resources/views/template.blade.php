@@ -113,7 +113,7 @@
             </h5>
             
             
-            <a href="#!" class="btn btn-rounded btn-outline-white">
+            <a href="{{url('contact')}}" class="btn btn-rounded btn-outline-white">
                 <span class="font-weight-bold">@yield('button-title')</span>
             </a>
 
@@ -154,7 +154,7 @@
 
 
 <!--Footer-->
-<footer class="page-footer text-center indigo darken-1 font-small">
+<footer class="page-footer text-center font-small">
 
     <div class="mt-4">
 

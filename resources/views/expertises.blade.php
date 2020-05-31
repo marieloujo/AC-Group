@@ -32,7 +32,13 @@
     <div class="container-fluid pt-5 pb-4 animate" id="ac-communication" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
 
         <h3 class="font-weight-bold text-center pt-5">
-            {{ trans('sentences.pages.accueil.expertises.poles.1.title')}}</h3>
+            {{-- trans('sentences.pages.accueil.expertises.poles.1.title')--}}</h3>
+
+        <div class="col-md-12 d-flex justify-content-center">
+            <img src="{{asset('images/logo/AC-Communication.jpg')}}" 
+                class="img-fluid" style="height: 130px;" alt="">
+        </div>
+
         <hr class="w-header my-4">
         <p class="text-muted lead mx-auto mb-5 col-lg-12 text-center">
             {{ trans('sentences.pages.accueil.expertises.poles.1.description')}}
@@ -50,26 +56,25 @@
 
             <!--Section: Content-->
             <section class="mt-5">
-        
+
                 <!-- Grid row -->
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5 col-md-8 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
-                        <div class="overlay mb-lg-0 mb-4">
-                            <img class="img-fluid" src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}" alt="Sample image">
-                            <a>
-                            <div class="mask rgba-white-slight"></div>
-                            </a>
+                        <div class="overlay">
+                            <img class="img-fluid" 
+                                src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}" 
+                                alt="Sample image" />
                         </div>
             
                     </div>
                     <!-- Grid column -->
             
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.title')}}</h3>
@@ -78,7 +83,6 @@
                             {{ trans('sentences.pages.accueil.expertises.poles.1.list.1.description')}}
                         </p>
                         
-                
                     </div>
                     <!-- Grid column -->
             
@@ -106,7 +110,7 @@
             
                     
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.1.list.2.title')}}</h3>
@@ -121,7 +125,7 @@
 
 
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay mb-lg-0 mb-4">
@@ -158,7 +162,7 @@
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-12 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay mb-lg-0 mb-4">
@@ -172,7 +176,7 @@
                     <!-- Grid column -->
             
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.1.list.3.title')}}</h3>
@@ -209,7 +213,14 @@
     <div class="pt-5 pb-4 animate" id="ac-services" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
 
         <h3 class="font-weight-bold text-center pt-5">
-            {{ trans('sentences.pages.accueil.expertises.poles.2.title')}}</h3>
+            {{-- trans('sentences.pages.accueil.expertises.poles.2.title')--}}</h3>
+
+        <div class="col-md-12 d-flex justify-content-center">
+            <img src="{{asset('images/logo/AC-Service.jpg')}}" 
+                class="img-fluid" style="height: 130px;" alt="">
+        </div>
+
+
         <hr class="w-header my-4">
         <p class="text-muted lead mx-auto mb-5 col-lg-12 text-center">
             {{ trans('sentences.pages.accueil.expertises.poles.2.description')}}
@@ -232,7 +243,7 @@
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
@@ -246,7 +257,7 @@
                     <!-- Grid column -->
             
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.1.title')}}</h3>
@@ -286,7 +297,7 @@
             
                     
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.2.title')}}</h3>
@@ -305,7 +316,7 @@
 
 
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-8 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
@@ -341,11 +352,11 @@
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-8 mb-lg-0 mb-4">
             
                         <!-- Featured image -->
-                        <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" alt="Sample image">
+                        <div class=" overlay mb-lg-0 mb-4" id="timeline">
+                            <img class="img-fluid" src="{{asset('images/illustrations/maitrise_ouvrage_maitrise_œuvre.svg')}}" alt="Sample image">
                             <a>
                             <div class="mask rgba-white-slight"></div>
                             </a>
@@ -355,7 +366,7 @@
                     <!-- Grid column -->
             
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.3.title')}}</h3>
@@ -395,7 +406,7 @@
             
                     
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.4.title')}}
@@ -415,7 +426,7 @@
 
 
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-8 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
@@ -451,7 +462,7 @@
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-8 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
@@ -465,7 +476,7 @@
                     <!-- Grid column -->
             
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.5.title')}}</h3>
@@ -505,7 +516,7 @@
             
                     
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.6.title')}}
@@ -525,7 +536,7 @@
 
 
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-8 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
                         <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
@@ -561,11 +572,11 @@
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+                    <div class="col-lg-5  col-md-8 mb-lg-0 mb-4" id="timeline">
             
                         <!-- Featured image -->
-                        <div class=" overlay rounded z-depth-1 mb-lg-0 mb-4">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" alt="Sample image">
+                        <div class=" overlay mb-lg-0 mb-4">
+                            <img class="img-fluid" src="{{asset('images/illustrations/etude_eclairage_extérieur_ intérieur_architectural.svg')}}" alt="Sample image">
                             <a>
                             <div class="mask rgba-white-slight"></div>
                             </a>
@@ -575,7 +586,7 @@
                     <!-- Grid column -->
             
                     <!-- Grid column -->
-                    <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+                    <div class="col-lg-7 col-md-12 mb-md-0 mb-4 mt-xl-4">
             
                         <h3 class="font-weight-bold mb-2">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.list.7.title')}}

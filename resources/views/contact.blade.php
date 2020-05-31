@@ -96,8 +96,10 @@
                 <ul>
                     <li class="py-2 "><a href="#send-mail" data-toggle="tab">
                         {{ trans('sentences.pages.contact.formulaire.form-1.navigation-titre')}}</a></li>
-                    <li class="py-2"><a href="#send-simple-mail" data-toggle="tab">
-                        {{ trans('sentences.pages.contact.formulaire.form-2.navigation-titre')}}</a></li>
+                    <li class="py-2" class="row">
+                        <a href="#send-simple-mail" data-toggle="tab" class="col-md-12">
+                            {{ trans('sentences.pages.contact.formulaire.form-2.navigation-titre')}}
+                    </a></li>
                 </ul>
             </div>
 
@@ -176,13 +178,13 @@
                                     </h5>
 
                                     <div class="row">
-                                        <div class="col-md-1 mr-5">
+                                        <div class="col-md-2 mr-0 mr-md-4">
                                             <input type="number" class="input text-center" id="min" value="2000">
                                         </div>
-                                        <div class="col-md-8 mt-2 multi-range-field ">
+                                        <div class="col-md-6 mt-2 mr-3 multi-range-field ">
                                             <input id="budjet" class="multi-range range" name="budget"  type="range" />
                                         </div>
-                                        <div class="col-md-1 ml-3">
+                                        <div class="col-md-2 mt-5 mt-md-0 mt-lg-0">
                                             <input type="number" class="input text-center" id="max" value="20000">
                                         </div>
                                     </div>
@@ -206,10 +208,10 @@
                                     </h5>
 
                                     <div class="row">
-                                        <div class="col-md-10 mt-2 multi-range-field ">
+                                        <div class="col-md-10 mt-2 mr-3 multi-range-field ">
                                             <input id="delai" class="multi-range delai" name="delai"  type="range" />
                                         </div>
-                                        <div class="col-md-1 ml-3">
+                                        <div class="col-md-1 mt-5 mt-md-0 mt-lg-0">
                                             <input type="number" class="input text-center" id="mois" value="12">
                                         </div>
                                     </div>
@@ -232,7 +234,7 @@
                                 <h5 class="info-text font-weight-bold">
                                     {{ trans('sentences.pages.contact.formulaire.form-1.sections.3.titre')}}</h5>
 
-                                <div class="row pb-5">
+                                <div class="row pb-2 pb-lg-5">
 
                                     <div class="col-md-6">
 
@@ -363,8 +365,8 @@
                                 </div>
 
 
-                                <div class="input-group col-md-12 mt-5">
-                                    <div class="custom-file mt-5">
+                                <div class="input-group col-md-12 mt-0 mt-md-5 mt-lg-5 mb-5 mb-lg-0">
+                                    <div class="custom-file mt-0 mt-md-5 mt-lg-5">
                                         <input type="file" name="file" class="custom-file-input mt-5" 
                                             id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
                                         <label class="custom-file-label" for="inputGroupFile01">
@@ -464,6 +466,7 @@
         </div>
     </div> <!-- row -->
 </div> <!--  big container -->
+
 
 
 

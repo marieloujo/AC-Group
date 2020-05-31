@@ -25,8 +25,26 @@
                 {{ trans('sentences.pages.faq.faq.titre')}}</h3>
             <hr class="w-header">
             <!-- Section description -->
-            <p class="lead text-muted mx-auto col-md-10 mt-4 pt-2 mb-5 text-center">
-                {{ trans('sentences.pages.faq.faq.description')}}</p>
+            <section class="dark-grey-text container mb-5 mt-5">
+
+                <div class="row pr-lg-5 pb-3">
+                    
+                    <div class="col-md-8 d-flex align-items-center">
+                        <div>
+                            <p class="text-center mx-auto lead">
+                                {{ trans('sentences.pages.faq.faq.description')}}
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 animated d-flex justify-content-center">
+                        <img src="{{asset('images/illustrations/faq.svg')}}" style="height: 200px;"
+                            class="img-fluid" alt="smaple image">
+                    </div>
+        
+                </div>
+        
+            </section>
     
 
         

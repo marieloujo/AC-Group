@@ -88,14 +88,11 @@
                     <div class="col-md-8 mb-4">
                         <p class="text-muted pt-3">
                             {{ trans('sentences.pages.accueil.expertises.poles.1.description')}}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                            laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
-                        <img src="{{asset('images/logo/AC-Communication.jpg')}}" class="img-fluid" style="height: 200px;" alt="">
+                        <img src="{{asset('images/logo/AC-Communication.jpg')}}" class="img-fluid" 
+                            style="height: 130px;" alt="">
                     </div>
                 </div>
 
@@ -153,7 +150,6 @@
 
                             </li>
 
-
                             <li class="timeline-inverted">
                                 <!--Section Title -->
                                 <a href="#!" class="a">
@@ -168,7 +164,7 @@
                                     <div class="img-content mt-2 col-md-5 d-flex align-items-center">
                                         <div class="row">
                                             <div class="col-md-6"></div>
-                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            <img src="{{asset('images/illustrations/seo.svg')}}"
                                             class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
                                         </div>
                                     </div>
@@ -209,7 +205,7 @@
                     
                                 <!-- Section Description -->
 
-                                <div class="row container-fluid mb-5">
+                                <div class="row container-fluid mb-0">
                                     <div class="step-content ml-1 z-depth-1 p-0 mt-2 animate" data-animate="slideInLeft" 
                                         data-duration="1.0s" data-delay="0.1s">
 
@@ -235,7 +231,7 @@
 
                                     <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
                                         <div class="row">
-                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            <img src="{{asset('images/illustrations/gestion_financiere.svg')}}"
                                             class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
                                             <div class="col-md-6"></div>
                                         </div>
@@ -243,6 +239,8 @@
                                 </div>
 
                             </li>
+
+                            <li class="mb-5"></li>
 
                         </ul>
                         <!-- Timeline Wrapper -->
@@ -361,12 +359,14 @@
 
         </section>
 
-
         <section class="p-md-3 mx-md-5 mt-5" id="expertises-services">
 
-            <div class="container  pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
+            <div class="container  pb-4 animate" data-animate="fadeInUp" data-duration="1.0s" 
+                data-delay="0.1s">
+
                 <h5 class="font-weight-bold text-center mb-2">
-                    {{ trans('sentences.pages.accueil.expertises.poles.2.title')}}</h5>
+                    {{ trans('sentences.pages.accueil.expertises.poles.2.title')}}
+                </h5>
 
                 <hr class="w-header my-4">
 
@@ -374,14 +374,11 @@
                     <div class="col-md-8 mb-4">
                         <p class="text-muted pt-3">
                             {{ trans('sentences.pages.accueil.expertises.poles.2.description')}}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                            laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
-                        <img src="{{asset('images/logo/AC-Service.jpg')}}" class="img-fluid" style="height: 200px;" alt="">
+                        <img src="{{asset('images/logo/AC-Service.jpg')}}" class="img-fluid" 
+                            style="height: 130px;">
                     </div>
                 </div>
     
@@ -393,7 +390,7 @@
                     <div class="timeline-main">
                         <!-- Timeline Wrapper -->
                         <ul class="stepper stepper-vertical timeline colorful-timeline pl-0">
-                    
+
                             <li>
                                 <!--Section Title -->
                                 <a href="#!" class="a">
@@ -455,7 +452,7 @@
                                     <div class=" img-content mt-2 col-md-5 d-flex align-items-center">
                                         <div class="row">
                                             <div class="col-md-6"></div>
-                                            <img src="{{asset('images/illustrations/Data_Analytics_web marketing.svg')}}"
+                                            <img src="{{asset('images/illustrations/maitrise_ouvrage_maitrise_œuvre.svg')}}"
                                             class="img-fluid col-md-6 expertie-illustration w-50 h-25"/>
                                         </div>
                                     </div>
@@ -499,7 +496,7 @@
                     
                                 <!-- Section Description -->
 
-                                <div class="row container-fluid mb-5">
+                                <div class="row container-fluid">
                                     <div class="step-content  z-depth-1 p-0 ml-1 mt-2 animate" data-animate="slideInLeft" 
                                         data-duration="1.0s" data-delay="0.1s">
 
@@ -536,6 +533,8 @@
                                 </div>
 
                             </li>
+
+                            <li class="mb-5"></li>
 
                         </ul>
                         <!-- Timeline Wrapper -->
@@ -668,7 +667,6 @@
     
 
 
-
     <!--Section: Technologies-->
     <div class="container-fluid mt-5  my-5">
 
@@ -703,7 +701,6 @@
                 <ol class="carousel-indicators">
                     <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
                     <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
                 </ol>
                 <!--/.Indicators-->
             
@@ -719,7 +716,7 @@
                 
                             <div class="view overlay">
                                 <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    src="{{('images/logo/laravel.jpg')}}" 
                                     class="card-img-top" alt="">
                                 <a>
                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
@@ -727,11 +724,12 @@
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <h4 class="card-title"><strong>Laravel</strong></h4>
                                 <hr>
                                 <p class="card-text mb-3">
                                     Some quick example text to build on the card title
-                                    and make up the bulk of the card's content.Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                    Some quick example text to build on the card title
                                     and make up the bulk of the card's content.
                                 </p>
                             </div>
@@ -743,7 +741,7 @@
                 
                             <div class="view overlay">
                                 <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20(3).jpg" 
+                                    src="{{('images/logo/angular.jpeg')}}" 
                                     class="card-img-top" alt="">
                                 <a>
                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
@@ -752,7 +750,7 @@
                             
 
                             <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <h4 class="card-title"><strong>Angular</strong></h4>
                                 <hr>
                                 <p class="card-text mb-3">
                                     Some quick example text to build on the card title
@@ -766,15 +764,14 @@
                 
                             <div class="view overlay">
                                 <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
-                                    class="card-img-top" alt="">
+                                    src="{{asset('images/logo/flutter.png')}}" class="card-img-top" alt="">
                                 <a>
                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                 </a>
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <h4 class="card-title"><strong>Flutter</strong></h4>
                                 <hr>
                                 <p class="card-text mb-3">
                                     Some quick example text to build on the card title
@@ -799,7 +796,7 @@
                 
                             <div class="view overlay">
                                 <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
+                                    src="{{('images/logo/laravel.jpg')}}" 
                                     class="card-img-top" alt="">
                                 <a>
                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
@@ -807,11 +804,12 @@
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <h4 class="card-title"><strong>Laravel</strong></h4>
                                 <hr>
                                 <p class="card-text mb-3">
                                     Some quick example text to build on the card title
-                                    and make up the bulk of the card's content.Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.
+                                    Some quick example text to build on the card title
                                     and make up the bulk of the card's content.
                                 </p>
                             </div>
@@ -823,7 +821,7 @@
                 
                             <div class="view overlay">
                                 <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20(3).jpg" 
+                                    src="{{('images/logo/angular.jpeg')}}" 
                                     class="card-img-top" alt="">
                                 <a>
                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
@@ -832,7 +830,7 @@
                             
 
                             <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <h4 class="card-title"><strong>Angular</strong></h4>
                                 <hr>
                                 <p class="card-text mb-3">
                                     Some quick example text to build on the card title
@@ -846,15 +844,14 @@
                 
                             <div class="view overlay">
                                 <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
-                                    class="card-img-top" alt="">
+                                    src="{{asset('images/logo/flutter.png')}}" class="card-img-top" alt="">
                                 <a>
                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                 </a>
                             </div>
 
                             <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
+                                <h4 class="card-title"><strong>Flutter</strong></h4>
                                 <hr>
                                 <p class="card-text mb-3">
                                     Some quick example text to build on the card title
@@ -870,86 +867,6 @@
                 </div>
                 <!--/.Second slide-->
             
-                <!--Third slide-->
-                <div class="carousel-item">
-            
-                    <div class="card-deck container-fluid">
-
-                        <div class="card">
-                
-                            <div class="view overlay">
-                                <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
-                                    class="card-img-top" alt="">
-                                <a>
-                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                </a>
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
-                                <hr>
-                                <p class="card-text mb-3">
-                                    Some quick example text to build on the card title
-                                    and make up the bulk of the card's content.Some quick example text to build on the card title
-                                    and make up the bulk of the card's content.
-                                </p>
-                            </div>
-                            
-                
-                        </div>
-            
-                        <div class="card">
-                
-                            <div class="view overlay">
-                                <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20(3).jpg" 
-                                    class="card-img-top" alt="">
-                                <a>
-                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                </a>
-                            </div>
-                            
-
-                            <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
-                                <hr>
-                                <p class="card-text mb-3">
-                                    Some quick example text to build on the card title
-                                    and make up the bulk of the card's content.
-                                </p>
-                            </div>
-                
-                        </div>
-
-                        <div class="card">
-                
-                            <div class="view overlay">
-                                <img 
-                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(12).jpg" 
-                                    class="card-img-top" alt="">
-                                <a>
-                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                </a>
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="card-title"><strong>Card title</strong></h4>
-                                <hr>
-                                <p class="card-text mb-3">
-                                    Some quick example text to build on the card title
-                                    and make up the bulk of the card's content.
-                                </p>
-                            </div>
-                            
-                
-                        </div>
-
-                    </div>
-            
-                </div>
-                <!--/.Third slide-->
-            
                 </div>
                 <!--/.Slides-->
             
@@ -962,12 +879,15 @@
     <!-- End Section-->
 
 
-
+   
 
     <!--Section: Témoignages-->
-    <div class="container-fluid mt-5 animate" data-animate="zoomIn" data-duration="1.0s" data-delay="0.1s">
+    <div class="container-fluid mt-5 animate" data-animate="zoomIn" data-duration="1.0s" 
+        data-delay="0.1s">
 
-        <h3 class="font-weight-bold mt-5 text-center">{{ trans('sentences.pages.accueil.temoignages​.titre')}}</h3>
+        <h3 class="font-weight-bold mt-5 text-center">
+            {{ trans('sentences.pages.accueil.temoignages​.titre')}}
+        </h3>
         <hr class="w-header my-4">
 
         <div class="container-fluid my-3 px-5 pb-3">

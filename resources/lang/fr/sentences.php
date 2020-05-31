@@ -205,7 +205,7 @@ return [
         'intro' => [
             'title' => 'Nos expertises',
             'description' => '
-                Retrouvez l\'ensemble des expertises et offres de services de notre agence.<br>
+                Retrouvez l\'ensemble des expertises et offres de services de notre agence.
                 Passionnés par les expériences utilisateurs et l’innovation, nous améliorons 
                 sans cesse notre savoir-faire.',
         ],
